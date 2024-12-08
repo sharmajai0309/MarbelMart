@@ -120,3 +120,19 @@
     
 })(jQuery);
 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from refreshing the page
+
+    // Get values from the form fields (optional, can be used for further processing)
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Here you can add your form submission logic (e.g., AJAX call, API request)
+
+    // Show success message
+    document.getElementById('successMessage').style.display = 'block';
+
+    // Optionally, you can reset the form after submission
+    document.getElementById('contactForm').reset();
+});

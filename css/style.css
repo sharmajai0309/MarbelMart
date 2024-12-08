@@ -10330,6 +10330,25 @@ body {
     width: 100%; /* Ensures the div takes up full width */
     height: 100%; /* Or set a specific height if needed */
 }
+.white-shadow {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.8); /* Stronger shadow */
+  background-color: transparent; /* Ensure no overlap */
+  border-radius: 8px; /* Matches the image's rounded corners */
+  
+}
+.black-shadow{
+  box-shadow: 
+   /* White shadow */
+  -15px -10px 75px 11px rgba(0, 0, 0, 0.8);     /* Black shadow */
+-webkit-box-shadow: 
+  
+  -15px -10px 75px 11px rgba(0, 0, 0, 0.8);
+-moz-box-shadow: 
+  
+  -15px -10px 75px 11px rgba(0, 0, 0, 0.8);
+border-radius: 20px; /* Optional for rounded corners */
+}
+
 
 
 
