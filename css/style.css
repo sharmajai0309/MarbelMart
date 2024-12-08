@@ -5,6 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10296,5 +10297,40 @@ img {
 body {
   overflow-x: hidden;
 }
+
+
+.custom-navbar {
+  background-image: url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the navbar */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+  border: 2px solid white; /* Adds a solid highlighted border */
+  border-radius: 8px; /* Adds rounded corners */
+  box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5); /* Adds a glowing shadow effect */
+}
+
+.custom-topbar{
+  background-image: url('https://images.unsplash.com/photo-1527049979667-990f1d0d8e7f?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the navbar */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+.custom-container-bg {
+  background-image: url('https://wallpaperaccess.com/full/742737.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+.projectborder-custom {
+    border: 1px solid light; /* 2px thickness with black color */
+    background-image: url('../img/background.jpg'); /* Path relative to the CSS file */
+    background-size: cover; /* Ensures the image covers the div without stretching */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+    width: 100%; /* Ensures the div takes up full width */
+    height: 100%; /* Or set a specific height if needed */
+}
+
+
 
 
