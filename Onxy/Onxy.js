@@ -213,18 +213,19 @@ function renderProducts(productsToRender = products) {
 
   productsToRender.forEach((product) => {
     const productCard = document.createElement("div");
-    productCard.className = "product-card  border p-3  rounded-lg shadow-2xl bg-gradient-to-bl from-[#ffe4e6]  to-[#ccfbf1]";
+    productCard.className = "product-card  border-2  p-4 rounded-lg shadow-2xl bg-cyan-300";
 
     productCard.innerHTML = `
       <img
         src="${product.image}"
         alt="${product.name}"
-        class="w-full h-64 object-cover rounded-2xl mb-2
+        class="w-full h-64 object-cover rounded-xl mb-2
+        border-2 border-black 
         "
       />
-      <h2 class="text-lg font-bold font-mono underline ">${product.name}</h2>
+      <h2 class="text-lg font-bold font-serif text-center underline ">${product.name}</h2>
       <button
-        class="add-to-cart-btn mt-4 bg-blue-500 text-white ring-2 ring-slate-700 px-4 py-2 rounded hover:bg-blue-600 "
+        class="add-to-cart-btn mt-4  hover:bg-slate-800 font-bold rounded-lg text-lg  w-40 h-14 bg-[#374151] text-[#ffffff] justify-center "
         data-product-id="${product.id}"
         data-product-name="${product.name}"
         data-product-image="${product.image}"
