@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" rel="icon">
+  <meta charset="utf-8">
+    <title>MarbleMart</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Tailwind CSS CDN -->
+
+   
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     /* Optional styling for modal */
     .modal {
@@ -25,11 +27,34 @@
 </head>
 
 <body class="font-sans ">
-  <a href="../index.html">
-    <button type="button" class="">Go to Page 1</button>
-  </a>
+  <div class="bg-black text-white py-4 px-6 flex items-center justify-between">
+    <div class="space-x-6 flex">
+      <a href="../index.html" class="hover:underline">Home</a>
+      <h4>|</h4>
+      <a href="../contact.html" class="hover:underline">Contact</a>
+      <h4>|</h4>
+      
+      <a href="../about.html" class="hover:underline">About Us</a>
+      <h4>|</h4>
+      <a href="../blog.html" class="hover:underline">Blog</a>
+    </div>
+    <div class="space-x-4 flex hidden sm:flex">
+      <a href="../Onxy/Onxy.html" class="hover:underline">Onyx</a>
+      <h4>|</h4>
+      <a href="../Indian Granite/Indian Granite.html" class="hover:underline">Indian Granite</a>
+      <h4>|</h4>
+      <a href="../gallery/gallery.html" class="hover:underline">Gallery 1</a>
+      <h4>|</h4>
+      <a href="../gallery/gallery2.html" class="hover:underline">Gallery 2</a>
+    </div>
+  </div>
+  
+
   <!-- Heading  -->
+   
   <div class="bg-slate-900 pt-8 bg-cover bg-center" style="background-image: url('your-image-path.jpg');">
+    
+    
     <div class="flex flex-col justify-center items-center">
       
         </div>
@@ -140,21 +165,15 @@
           <label for="user-name">Name</label>
           <input type="text" id="user-name" name="name" required class="border p-2 mb-4 w-full">
           <label for="user-phone">Phone</label>
-
           <input type="tel" id="user-phone" name="phone" required class="border p-2 mb-4 w-full">
           <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
-
-
-
-
-
-
         </form>
       </div>
     </div>
 
 
     <script src="Imported Marbles.js"></script>
+    
 </body>
 
 </html>

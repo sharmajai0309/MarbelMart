@@ -1,202 +1,89 @@
 // Dynamic product data - can be updated or fetched from an API
-const products = [ 
-  
+const products = [
   {
-    id: 1,
-    name: "Bianco White",
-    image: "Imported Marbles/1.Bianco White.png",
+    id: 400,
+    name: "CRYSTAL BLUE",
+    image: "./Indian Granite/1.CRYSTAL BLUE.png",
   },
   {
-    id: 2,
-    name: "Brouch Brown",
-    image: "Imported Marbles/2.Brouch Brown.png",
+    id: 401,
+    name: "Gem Red",
+    image: "./Indian Granite/2.Gem Red.png",
   },
   {
-    id: 3,
-    name: "Dark Emperador",
-    image: "Imported Marbles/3.Dark Emperador.png",
+    id: 402,
+    name: "Panther Black",
+    image: "./Indian Granite/3.panther black.png",
   },
   {
-    id: 4,
-    name: "Kalkata White",
-    image: "Imported Marbles/4.Kalkata white.png",
+    id: 403,
+    name: "Khareda Grey",
+    image: "./Indian Granite/4.khareda grey.png",
   },
   {
-    id: 5,
-    name: "Omani Grey",
-    image: "Imported Marbles/5.Omani Grey.png",
+    id: 404,
+    name: "IMPERIAL WHITE",
+    image: "./Indian Granite/5.IMPERIAL WHITE.png",
   },
   {
-    id: 6,
-    name: "Perlato Sicilia",
-    image: "Imported Marbles/6.Perlato Sicilia.png",
+    id: 405,
+    name: "Crystal Brown",
+    image: "./Indian Granite/6.crystal brown.png",
   },
   {
-    id: 7,
-    name: "Pietra Grey",
-    image: "Imported Marbles/7.Pietra Grey.png",
+    id: 406,
+    name: "Coffee Brown",
+    image: "./Indian Granite/7.Coffee Brown.png",
   },
   {
-    id: 8,
-    name: "Majestic Grey",
-    image: "Imported Marbles/8.Majestic grey.png",
+    id: 407,
+    name: "Russian Pink",
+    image: "./Indian Granite/8.Russian pink.png",
   },
   {
-    id: 9,
-    name: "Armani Grey",
-    image: "Imported Marbles/9.Armani Grey.png",
+    id: 408,
+    name: "Cotton White",
+    image: "./Indian Granite/9.cotton white.png",
   },
   {
-    id: 10,
-    name: "Lasa White",
-    image: "Imported Marbles/10.Lasa White.png",
+    id: 409,
+    name: "Nosera Green",
+    image: "./Indian Granite/10.Nosera Green.png",
   },
   {
-    id: 11,
-    name: "Statuario",
-    image: "Imported Marbles/11.Statuario.png",
+    id: 410,
+    name: "Cera Grey",
+    image: "./Indian Granite/11.Cera Grey.png",
   },
   {
-    id: 12,
-    name: "1 Statuario",
-    image: "Imported Marbles/12.Statuario.png",
+    id: 411,
+    name: "Ice Blue Lapta",
+    image: "./Indian Granite/12.Ice blue Lapta.png",
   },
   {
-    id: 13,
-    name: " 2 Statuario",
-    image: "Imported Marbles/13.Statuario.png",
+    id: 412,
+    name: "Viscon White",
+    image: "./Indian Granite/13.Viscon white.png",
   },
   {
-    id: 14,
-    name: "Dark Emperador",
-    image: "Imported Marbles/14.Dark Emperador.png",
+    id: 413,
+    name: "Paradiso",
+    image: "./Indian Granite/14.Paradiso.png",
   },
   {
-    id: 15,
-    name: "3 Statuario",
-    image: "Imported Marbles/15.Statuario.png",
+    id: 414,
+    name: "Carbon Brown",
+    image: "./Indian Granite/15.Carbon  brown.png",
   },
   {
-    id: 16,
-    name: "1 Dayna",
-    image: "Imported Marbles/16.Dayna.png",
-  },
-  {
-    id: 17,
-    name: "2 Dayna",
-    image: "Imported Marbles/17.Dayna.png",
-  },
-  {
-    id: 18,
-    name: "3 Dayna",
-    image: "Imported Marbles/18.Dayna.png",
-  },
-  {
-    id: 19,
-    name: "Grey 1",
-    image: "Imported Marbles/19.Grey 1.png",
-  },
-  {
-    id: 20,
-    name: "1 White Travertine",
-    image: "Imported Marbles/20.white travetine.png",
-  },
-  {
-    id: 21,
-    name: "Grey 2",
-    image: "Imported Marbles/21.Grey 2.png",
-  },
-  {
-    id: 22,
-    name: "2 White Travertine",
-    image: "Imported Marbles/22.white travetine.png",
-  },
-  {
-    id: 23,
-    name: "Brescia Beige",
-    image: "Imported Marbles/23.brescia beige.png",
-  },
-  {
-    id: 24,
-    name: "Moon Cream",
-    image: "Imported Marbles/24.moon cream.png",
-  },
-  {
-    id: 25,
-    name: "Beige Travertine",
-    image: "Imported Marbles/25.beige travetine.png",
-  },
-  {
-    id: 26,
-    name: "Noche Travertine",
-    image: "Imported Marbles/26.noche travertine.png",
-  },
-  {
-    id: 27,
-    name: "Grey William",
-    image: "Imported Marbles/27.Grey william.png",
-  },
-  {
-    id: 28,
-    name: "Armani Brown",
-    image: "Imported Marbles/28.Armani brown.png",
-  },
-  {
-    id: 29,
-    name: "Green Levanto",
-    image: "Imported Marbles/29.Green Levanto.png",
-  },
-  {
-    id: 30,
-    name: "Rosso Verona",
-    image: "Imported Marbles/30.Rosso Verona.png",
-  },
-  {
-    id: 31,
-    name: "French Brown",
-    image: "Imported Marbles/31.French Brown.png",
-  },
-  {
-    id: 32,
-    name: "Grey",
-    image: "Imported Marbles/32.Grey.png",
-  },
-  {
-    id: 33,
-    name: "Rosa Levanto",
-    image: "Imported Marbles/33.Rosa Levanto.png",
-  },
-  {
-    id: 34,
-    name: "Red Alicante",
-    image: "Imported Marbles/34.Red Alicante.png",
-  },
-  {
-    id: 35,
-    name: "Burberry Beige",
-    image: "Imported Marbles/35.burberry beige.png",
-  },
-  {
-    id: 36,
-    name: "Brescia Aurora",
-    image: "Imported Marbles/36.Breicca Aurora.png",
-  },
-  {
-    id: 37,
-    name: "Silvia",
-    image: "Imported Marbles/37.Silvia.png",
-  },
-  {
-    id: 38,
-    name: "Botticino Fiorito",
-    image: "Imported Marbles/38.Botticino Fiorito.png",
-  },
-  {
-    id: 39,
-    name: "Botticino Classico",
-    image: "Imported Marbles/39.Botticino Classico.png",
+    id: 415,
+    name: "ICON BROWN",
+    image: "./Indian Granite/16.ICON BROWN.png",
   },
 ];
+
+
+
  // Event listeners
  document.getElementById("cart-icon").addEventListener("click", openCartModal);
  document.getElementById("close-cart-btn").addEventListener("click", closeCartModal);
@@ -206,7 +93,7 @@ const products = [
   // Initialize the cart from localStorage
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   
-  // Render products dynamically based on the products array
+  // Render products dynamically based on the  products array
   function renderProducts() {
     const productsContainer = document.getElementById("products");
   
@@ -288,9 +175,8 @@ const products = [
       const cartItem = document.createElement("div");
       cartItem.className = "cart-item flex items-center space-x-4 p-2 border-b";
   
-
-      // <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded object-cover"></img>
       cartItem.innerHTML = `
+        
         <span>${item.name}</span>
         <button
           class="remove-btn text-red-500 hover:text-red-700"

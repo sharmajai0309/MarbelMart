@@ -1,11 +1,193 @@
 // Dynamic product data - can be updated or fetched from an API
 const products = [
   {
-    id: 40,
-    name: "Bianco White",
-    image: "Imported Marbles/1.Bianco White.png",
-  }
+    id: 200,
+    name: "ZR007",
+    image: "./Onxy/1.ZR007.png",
+  },
+  {
+    id: 201,
+    name: "ZR001",
+    image: "./Onxy/2.ZR001.png",
+  },
+  {
+    id: 202,
+    name: "TR8004",
+    image: "./Onxy/3.TR8004.png",
+  },
+  {
+    id: 203,
+    name: "P02",
+    image: "./Onxy/4.P02.png",
+  },
+  {
+    id: 204,
+    name: "B9014",
+    image: "./Onxy/5.B9014.png",
+  },
+  {
+    id: 205,
+    name: "TR8004",
+    image: "./Onxy/6.TR8004.png",
+  },
+  {
+    id: 206,
+    name: "TR9015",
+    image: "./Onxy/7.TR9015.png",
+  },
+  {
+    id: 207,
+    name: "White Onyx",
+    image: "./Onxy/8.White Onyx.png",
+  },
+  {
+    id: 208,
+    name: "TR7918",
+    image: "./Onxy/9.TR7918.png",
+  },
+  {
+    id: 209,
+    name: "Pakistani Onyx",
+    image: "./Onxy/10.Pakistani Onyx.png",
+  },
+  {
+    id: 210,
+    name: "Mango Onyx",
+    image: "./Onxy/11.Mango Onyx.png",
+  },
+  {
+    id: 211,
+    name: "Tiger Onyx",
+    image: "./Onxy/12.Tiger onyx.png",
+  },
+  {
+    id: 212,
+    name: "Honey Onyx 1",
+    image: "./Onxy/13.Honey Onyx .1.png",
+  },
+  {
+    id: 213,
+    name: "Honey Onyx 2",
+    image: "./Onxy/14.Honey Onyx .2.png",
+  },
+  {
+    id: 214,
+    name: "Cappuccino",
+    image: "./Onxy/15.Cappuccino .png",
+  },
+  {
+    id: 215,
+    name: "Multi Onyx",
+    image: "./Onxy/16.Multi onxy.png",
+  },
+  {
+    id: 216,
+    name: "Onyx 1",
+    image: "./Onxy/17.Onxy 1.png",
+  },
+  {
+    id: 217,
+    name: "TR8101",
+    image: "./Onxy/18.TR8101.png",
+  },
+  {
+    id: 218,
+    name: "Onyx 2",
+    image: "./Onxy/19.Onxy 2.png",
+  },
+  {
+    id: 219,
+    name: "TR8022",
+    image: "./Onxy/20.TR8022.png",
+  },
+  {
+    id: 220,
+    name: "TR9002",
+    image: "./Onxy/21.TR9002.png",
+  },
+  {
+    id: 221,
+    name: "TR9004",
+    image: "./Onxy/22.TR9004.png",
+  },
+  {
+    id: 222,
+    name: "Onyx 3",
+    image: "./Onxy/23.Onxy 3.png",
+  },
+  {
+    id: 223,
+    name: "TR8017",
+    image: "./Onxy/24.TR8017.png",
+  },
+  {
+    id: 224,
+    name: "TR8001",
+    image: "./Onxy/25.TR8001.png",
+  },
+  {
+    id: 225,
+    name: "Onyx 4",
+    image: "./Onxy/26.Onxy 4.png",
+  },
+  {
+    id: 226,
+    name: "Onyx 5",
+    image: "./Onxy/27.Onxy 5.png",
+  },
+  {
+    id: 227,
+    name: "TR8018",
+    image: "./Onxy/28.TR8018.png",
+  },
+  {
+    id: 228,
+    name: "ZR002",
+    image: "./Onxy/29.ZR002.png",
+  },
+  {
+    id: 229,
+    name: "TR9001",
+    image: "./Onxy/30.TR9001.png",
+  },
+  {
+    id: 230,
+    name: "TR8003",
+    image: "./Onxy/31.TR8003.png",
+  },
+  {
+    id: 231,
+    name: "TR8008",
+    image: "./Onxy/32.TR8008.png",
+  },
+  {
+    id: 232,
+    name: "Onyx 6",
+    image: "./Onxy/33.Onxy 6.png",
+  },
+  {
+    id: 233,
+    name: "Onyx 7",
+    image: "./Onxy/34.Onxy 7.png",
+  },
+  {
+    id: 234,
+    name: "Onyx 8",
+    image: "./Onxy/35.Onxy 8.png",
+  },
+  {
+    id: 235,
+    name: "Onyx 9",
+    image: "./Onxy/36.Onxy 9.png",
+  },
+  {
+    id: 236,
+    name: "Onyx 10",
+    image: "./Onxy/37.Onxy 10.png",
+  },
 ];
+
+
  // Event listeners
  document.getElementById("cart-icon").addEventListener("click", openCartModal);
  document.getElementById("close-cart-btn").addEventListener("click", closeCartModal);
@@ -98,7 +280,7 @@ const products = [
       cartItem.className = "cart-item flex items-center space-x-4 p-2 border-b";
   
       cartItem.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded object-cover">
+        
         <span>${item.name}</span>
         <button
           class="remove-btn text-red-500 hover:text-red-700"
@@ -213,19 +395,19 @@ function renderProducts(productsToRender = products) {
 
   productsToRender.forEach((product) => {
     const productCard = document.createElement("div");
-    productCard.className = "product-card  border-2  p-4 rounded-lg shadow-2xl bg-cyan-300";
+    productCard.className = "product-card  border-2  p-1  rounded-lg shadow-2xl bg-cyan-300";
 
     productCard.innerHTML = `
       <img
         src="${product.image}"
         alt="${product.name}"
         class="w-full h-64 object-cover rounded-xl mb-2
-        border-2 border-black 
+        border-4 border-black
         "
       />
       <h2 class="text-lg font-bold font-serif text-center underline ">${product.name}</h2>
       <button
-        class="add-to-cart-btn mt-4  hover:bg-slate-800 font-bold rounded-lg text-lg  w-40 h-14 bg-[#374151] text-[#ffffff] justify-center "
+        class="add-to-cart-btn  mt-4  hover:bg-slate-800 font-bold rounded-lg text-lg  w-40 h-14 bg-[#374151] text-[#ffffff] justify-center "
         data-product-id="${product.id}"
         data-product-name="${product.name}"
         data-product-image="${product.image}"
