@@ -80,9 +80,92 @@ const products = [
     name: "ICON BROWN",
     image: "./Indian Granite/16.ICON BROWN.png",
   },
+  {
+    id: 416,
+    name: "ICON BROWN",
+    image: "./Indian Granite/16.ICON BROWN.png"
+  },
+  {
+    id: 417,
+    name: "Alaska Pink",
+    image: "./Indian Granite/17 Alaska Pink.jpeg"
+  },
+  {
+    id: 418,
+    name: "Alaska Red",
+    image: "./Indian Granite/18 Alaska Red .jpeg"
+  },
+  {
+    id: 419,
+    name: "Alaska White",
+    image: "./Indian Granite/19 Alaska White .png"
+  },
+  {
+    id: 420,
+    name: "Alaska Gold",
+    image: "./Indian Granite/20 Alaska-Gold.jpg"
+  },
+  {
+    id: 421,
+    name: "Cheema Pink Granite",
+    image: "./Indian Granite/21 Cheema-Pink-Granite jpg.jpg"
+  },
+  {
+    id: 422,
+    name: "Commando Black",
+    image: "./Indian Granite/22 commando-black.jpg"
+  },
+  {
+    id: 423,
+    name: "Crystal Yellow",
+    image: "./Indian Granite/23 crystal-yellow .webp"
+  },
+  {
+    id: 424,
+    name: "Diamond Brown",
+    image: "./Indian Granite/24 Diamod Brown .jpeg"
+  },
+  {
+    id: 425,
+    name: "Gd Brown",
+    image: "./Indian Granite/25Gd Brown.jpeg"
+  },
+  {
+    id: 426,
+    name: "Ice Blue",
+    image: "./Indian Granite/26 Ice Blue.jpeg"
+  },
+  {
+    id: 427,
+    name: "Khareda Grey Line",
+    image: "./Indian Granite/27 Khareda Grey line.jpeg"
+  },
+  {
+    id: 428,
+    name: "N Grey",
+    image: "./Indian Granite/28 N Grey.jpeg"
+  },
+  {
+    id: 429,
+    name: "Neo Marino",
+    image: "./Indian Granite/29 Neo Marino .jpeg"
+  },
+  {
+    id: 430,
+    name: "Premium Black",
+    image: "./Indian Granite/30 Premium Black.jpeg"
+  },
+  {
+    id: 431,
+    name: "R Black Granite",
+    image: "./Indian Granite/31 r-black-granite.webp"
+  },
+  {
+    id: 432,
+    name: "Raw Silk Granite",
+    image: "./Indian Granite/32 raw-silk-granite.jpg"
+  }  
 ];
-
-
 
  // Event listeners
  document.getElementById("cart-icon").addEventListener("click", openCartModal);
