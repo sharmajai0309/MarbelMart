@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for hover effects */
+        .card {
+            transition: transform 1s;
+        }
+        .card:hover {
+            transform: scale(1.09);
+        }
+        .card-img {
+            transition: filter 0.4s;
+        }
+        .card:hover .card-img {
+            filter: brightness(1.1);
+        }
+        .card-overlay {
+            transition: background-color 0.3s;
+        }
+        .card:hover .card-overlay {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <style>
+        /* Optional styling for modal */
+        .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          justify-content: center;
+          align-items: center;
+        }
+        .imgS {
+    width: 390px;
+    height: 250px;
+    border-radius: 8px;
+    border: 2px solid #000; /* Black border with 2px width */
+}
+
+@media (max-width: 768px) {
+    .imgS {
+        width: 280px;  /* Adjust width for smaller screens */
+        height: 180px; /* Adjust height for smaller screens */
+    }
+}
+
+      </style>
+</head>
+<body class="bg-black">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow ">
+        <div class="bg-black text-white py-4 px-6 flex items-center justify-between">
+            <div class="space-x-6 flex">
+              <a href="../index.html" class="hover:underline">Home</a>
+              <h4>|</h4>
+              <a href="../contact.html" class="hover:underline">Contact</a>
+              <h4>|</h4>
+              
+              <a href="../about.html" class="hover:underline">About Us</a>
+              <h4>|</h4>
+              <a href="../blog.html" class="hover:underline">Blog</a>
+            </div>
+            <div class="space-x-4 flex hidden sm:flex">
+              <a href="../gallery/gallery.html" class="hover:underline">Gallery 1</a>
+              <h4>|</h4>
+              <a href="../gallery/gallery2.html" class="hover:underline">Gallery 2</a>
+            </div>
+            
+          </div>
+    </nav>
+
+    <Header class="text-center">
+        <h1 class="text-7xl font-bold  gap-2 leading-tight px-2 pt-3">
+            <span class="text-white font-light">Collection</span>
+            
+        </h1>
+    </Header>
+
+    <!-- Card Section -->
+    <div class="container  mx-auto  py-8">
+        <div class="flex flex-wrap justify-center">
+            <div class="card m-4">
+                <a href="./" class="block relative">
+                    <div class="relative">
+                        <img src="https://www.aonemarbles.com/wp-content/uploads/2019/03/Red-Levanto-Marble.jpg" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">NANO</h5>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="card m-4">
+                <a href="" class="block relative">
+                    <div class="relative">
+                        <img src="https://i.pinimg.com/originals/15/4d/ae/154dae705b717bc8059cb93d2142e886.jpg" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">ZAARA TILES</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card m-4">
+                <a href="./ImportedMarbles/Imported Marbles.html" class="block relative">
+                    <div class="relative">
+                        <img src="https://static.vecteezy.com/system/resources/previews/027/803/927/large_2x/high-resolution-italian-marble-texture-background-breccia-marble-tiles-glossy-granite-slab-polished-quartz-ceramic-floor-tile-photo.jpg" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">IMPORTED MARBLES</h5>
+                        </div>
+                    </div>
+                </a>
+        </div>
+        <div class="flex flex-wrap justify-center">
+            <div class="card m-4">
+                <a href="./Onxy/Onxy.html" class="block relative">
+                    <div class="relative">
+                        <img src="https://static.vecteezy.com/system/resources/previews/028/217/455/large_2x/high-quality-onyx-marble-texture-for-home-decoration-and-surface-background-photo.jpg" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">ONXY</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card m-4">
+                <a href="./Indian Granite/Indian Granite.html" class="block relative">
+                    <div class="relative">
+                        <img src="https://images.wilsonart.com/media/catalog/product/cache/b66ec2c0d143bbfe0cd01d94af869e2e/3/4/3475_indian_granite_2400x1500.jpg" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">INDIAN GRANITE</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card m-4">
+                <a href="" class="block relative">
+                    <div class="relative">
+                        <img src="https://5.imimg.com/data5/YI/MM/SP/SELLER-469436/mpi-407-imported-white-granite-1000x1000.jpg" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">IMPORTED GRANITE</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center">
+            <div class="card m-4">
+                <a href="" class="block relative">
+                    <div class="relative">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.Wm17PiD93FP-iXSl7YPecgHaFj&pid=Api&P=0&h=180" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">SAND STONE</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- <div class="card m-4">
+                <a href="" class="block relative">
+                    <div class="relative">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.RCW8WN7FWss0MwPfdDO77gHaE8&pid=Api&P=0&h=180" 
+                             class="card-img imgS object-cover w-full h-auto rounded-lg" 
+                             alt="Card image cap">
+                        <div class="absolute inset-0 flex items-center justify-center card-overlay bg-black bg-opacity-50 rounded-lg">
+                            <h5 class="text-white text-lg font-semibold">ZAARA TILES</h5>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 bg-opacity-40 backdrop-blur-lg fixed-bottom text-white pt-5 pb-5 ">
+        <div class="container mx-auto text-center">
+            <p>&copy; MarbleMart. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+
+</body>
+</html>
