@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>iDESIGN - Interior Design HTML Template</title>
+    <title>MarbleMart</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -20,17 +20,103 @@
     <!-- Flaticon Font -->
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
+
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+
+    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
+
+    <style>
+           body {
+      background-color: #121212; /* Dark background */
+      color: #ffffff; /* Light text */
+      font-family: Arial, sans-serif;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Spacing between rows */
+      padding: 20px;
+    }
+    .image-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two images per row */
+      gap: 20px; /* Spacing between images */
+      width: 100%;
+      max-width: 1200px; /* Increase max-width for larger images */
+    }
+    .gallery-item img {
+      width: 100%; /* Fixed width */
+      height: 300px; /* Increase height for larger images */
+      object-fit: cover; /* Ensure the image covers the area without distortion */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    }
+    .center-image {
+      max-width: 1200px; /* Increase max-width for larger center image */
+      width: 100%;
+    }
+    .center-image img {
+      width: 100%;
+      height: 500px; /* Increase height for larger center image */
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #FFC107;
+    }
+    .btn-view {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+    .btn-view:hover {
+      background: #FFC107;
+      color: black;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 2s ease, transform 3s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(1);
+    }
+    /* Statistics Section */
+    .stats-section {
+      background: #1a1a1a;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .stats-box {
+      margin: 2rem 0;
+    }
+    .stats-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFC107;
+    }
+    .stats-label {
+      font-size: 1.2rem;
+      color: white;
+    }
+      </style>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark py-3">
+    <div class="container-fluid bg-dark py-3 custom-topbar">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
@@ -40,6 +126,11 @@
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
                         <a class="text-white pl-3" href="">Support</a>
+                        <span class="text-white pl-3">|</span>
+                        <a class="text-white pl-3" href="about.html">About Us</a>
+                        <span class="text-white pl-3">|</span>
+                        <a class="text-white pl-3" href="blog.html">Blog</a>
+
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
@@ -59,6 +150,8 @@
                         <a class="text-white pl-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
+
+
                     </div>
                 </div>
             </div>
@@ -67,323 +160,196 @@
     <!-- Topbar End -->
 
 
+
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-fluid position-relative" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                
+            <nav
+                class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5 rounded-lg custom-navbar">
+
                 <!-- Navbar Brand with logo and text -->
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
                     <!-- Add your logo here -->
-                    <img src="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" alt="Logo" class="navbar-logo" style="width: 70px; height: 70px; margin-right: 2px;">
+                    <img src="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" alt="Logo" class="navbar-logo"
+                        style="width: 70px; height: 70px; margin-right: 2px;">
                     <h1 class=" display-5 text-white"><span class="text-primary">arble</span>Mart</h1>
                 </a>
-    
+
                 <!-- Navbar Toggler -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">HOME</a>
-                        <a href="service.html" class="nav-item nav-link">SERVICES</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">INDIAN MARBLE</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SHOWROOM</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                <a href="gallery/gallery.html" class="dropdown-item">Gallery 1</a>
+                                <a href="gallery/gallery2.html" class="dropdown-item">Gallery 2</a>
                             </div>
                         </div>
-                        
-                        
+                        <div class="nav-item dropdown">
+                            <a href="" class="nav-link ">FACTORY</a>
+                            <!-- <div class="dropdown-menu rounded-0 m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div> -->
+                        </div>
+
+
                         <!-- Dropdowns for Marble categories -->
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IMPORTED MARBLE </a>
+                            <a href="collection.html" class="nav-link">COLLECTION</a>
+                            <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IMPORTED MARBLE </a>
+                             
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div> -->
+                        </div>
+                        
+                        <!-- <div class="nav-item dropdown">
+                            <a href="./Indian Granite/Indian Granite.html" class="nav-link">ABOUT US</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="blog.html" class="dropdown-item">Blog Grid</a>
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">NANO</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
+                        </div> -->
+                        <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">INDIAN Marble</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="blog.html" class="dropdown-item">Blog Grid</a>
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div>
-                        </div>
-    
+                        </div> -->
+
                         <!-- Contact Link -->
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link">CONTACT </a>
+                        <div class="nav-item dropdown">
+                            <a href="" class="nav-link">Zaara logo</a>
+                            <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IMPORTED MARBLE </a>
+                             
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
+    <!-- Navbar End -->
+    <section class="gallery py-3">
+      <h1 class="text-white">Factory</h1>
+      <!-- Large Center Image -->
+      <div class="center-image">
+        <img src="http://static.businessworld.in/upload/jO6tCt_WhatsApp_Image_2023_07_18_at_7.46.32_PM__2_.jpeg" alt="Center Image">
+      </div>
+  
+      <!-- Image Rows -->
+      <div class="image-row">
+        <div class="gallery-item">
+          <img src="https://happho.com/wp-content/uploads/2017/07/Marble-Quarry.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+          <img src="https://microgridnews.com/wp-content/uploads/2023/03/Karibib-Factory-internal_1440x960.jpg" alt="Image 2">
+        </div>
+      </div>
+      <div class="image-row">
+        <div class="gallery-item">
+          <img src="https://surajmarble.com/images/myimages/journey-of-marble/image-1.jpg" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.open-pr.com/L/5/L509454051_g.jpg" alt="Image 4">
+        </div>
+      </div>
+    </section>
+    
+
+   
 
     
 
-    <!-- Navbar End -->
+
+    
 
 
-    <!-- Under Nav Start -->
-    <div class="container-fluid bg-white py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 text-left mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-office font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Our Office</h5>
-                            <p class="m-0">123 Street, New York, USA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-left text-lg-center mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-email font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Email Us</h5>
-                            <p class="m-0">info@example.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-left text-lg-right mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-telephone font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Call Us</h5>
-                            <p class="m-0">+012 345 6789</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Under Nav End -->
+
+     
+       
+          
+     
 
 
-    <!-- Page Header Start -->
-    <div class="container-fluid bg-secondary py-5">
-        <div class="container py-5">
-            <div class="row align-items-center py-4">
-                <div class="col-md-6 text-center text-md-left">
-                    <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Our Projects</h1>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="btn btn-outline-primary" href="">Home</a>
-                        <i class="fas fa-angle-double-right text-primary mx-2"></i>
-                        <a class="btn btn-outline-primary disabled" href="">Our Projects</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header Start -->
+
+  
 
 
-    <!-- Projects Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col text-center mb-4">
-                    <h6 class="text-primary font-weight-normal text-uppercase mb-3">Our Projects</h6>
-                    <h1 class="mb-4">Some Of Our Awesome Interior Designing Projects</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".first">Complete</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".second">Running</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".third">Upcoming</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row mx-1 portfolio-container">
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
-                        </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
-                        </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
-                        </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
-                        </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-5.jpg" alt="">
-                        </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-6.jpg" alt="">
-                        </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Projects End -->
+
+
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
+    <div class="container-fluid bg-dark text-white py-1 px-sm-3 px-md-5 ">
+        <div class="row pt-4">
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-primary mb-4">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Asola Farm Rd, Asola Homes,
+                    Asola, New Delhi, Delhi
+                    110074</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+91 99100 59659</p>
+                <p><i class="fa fa-envelope mr-2"></i>sanjeev9000@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-primary mb-4">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="Indian Granite/Indian Granite.html"><i class="fa fa-angle-right mr-2"></i>Indian Granite</a>
+                    <a class="text-white mb-2" href="ImportedMarbles/Imported Marbles.html"><i class="fa fa-angle-right mr-2"></i>Imported Marbles</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-primary mb-4">Popular Links</h4>
+                <h4 class="text-primary mb-4">Popular Marbles</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white mb-2" href="gallery/gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery 1</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Gallery 2</a>
+                    <a class="text-white mb-2" href="Onxy/Onxy.html"><i class="fa fa-angle-right mr-2"></i>Onxy</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-primary mb-4">Newsletter</h4>
-                <form action="">
-                    <div class="form-group">
-                        <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
-                    </div>
-                    <div>
-                        <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Submit Now</button>
-                    </div>
-                </form>
+                <h4 class="text-primary mb-4">Map</h4>
+                <div class="rounded-lg overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d779.2083329190899!2d77.1938521592272!3d28.460901835191862!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1733127802495!5m2!1sen!2sin"
+                        width="1500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
         <div class="container border-top border-secondary pt-5">
             <p class="m-0 text-center text-white">
-                &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed by
-                <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+                &copy; <a class="text-white font-weight-bold" href="#">Marble Mart</a>. All Rights Reserved.
+
             </p>
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -400,9 +366,55 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        const blocks = document.querySelectorAll(".fade-in");
+        blocks.forEach(block => {
+          const rect = block.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            block.classList.add("show");
+          }
+        });
+      });
+  
+      // Counter Animation
+      document.addEventListener("scroll", () => {
+        const counters = document.querySelectorAll(".stats-number");
+        counters.forEach(counter => {
+          if (!counter.classList.contains("counted")) {
+            const rect = counter.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              counter.classList.add("counted");
+              animateCounter(counter);
+            }
+          }
+        });
+      });
+  
+      function animateCounter(element) {
+        const target = parseInt(element.getAttribute("data-target"));
+        const step = target / 100;
+        let count = 0;
+        const updateCounter = () => {
+          count += step;
+          if (count < target) {
+            element.textContent = Math.floor(count);
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = target;
+          }
+        };
+        requestAnimationFrame(updateCounter);
+      }
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
