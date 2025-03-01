@@ -67,6 +67,41 @@
     align-items: center;
     justify-content: space-between;
 }
+.material-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+        }
+        .material {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            position: relative;
+        }
+        .material:hover {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+        }
+        .material:hover::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
 
 .card-img-top {
     width: 100%; /* Make sure the image fits the card */
@@ -1011,7 +1046,12 @@
 
     <!-- Testimonial End -->
      
+      
+        
+            
        
+
+      
           
      
 
@@ -1025,6 +1065,13 @@
             <div class="d-flex justify-content-center align-items-center text-center mb-4">
                 <div class="col-lg-6 col-md-8 col">
                     <h1 class="mb-4  ">Some Of Our Finest Work</h1>
+                </div>
+                <div class="material-section d-none d-sm-flex">
+                    <div class="material" style="background-image: url('IndianMarbles/IndianMarbles/1\ Ambaji\ White\ 1.jpg');" data-name="Marble"></div>
+                    <div class="material" style="background-image: url('Nano/Nano/\(1\)\ NANO\ COLOURED.jpg');" data-name="Nano"></div>
+                    <div class="material" style="background-image: url('./Onxy/Onxy/2.ZR001.png');" data-name="Onxy"></div>
+                    <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/4\ UDAIPUR_GREEN.jpg');" data-name="IndianMarbles"></div>
+                    <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/5\ JAISALMER\ \ YELLOW.jpg');" data-name="Jaisalmer yellow"></div>
                 </div>
             </div>
 
