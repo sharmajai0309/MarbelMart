@@ -136,3 +136,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Optionally, you can reset the form after submission
     document.getElementById('contactForm').reset();
 });
+

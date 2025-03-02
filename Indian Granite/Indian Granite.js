@@ -80,11 +80,7 @@ const products = [
     name: "ICON BROWN",
     image: "./Indian Granite/16.ICON BROWN.png",
   },
-  {
-    id: 416,
-    name: "ICON BROWN",
-    image: "./Indian Granite/16.ICON BROWN.png"
-  },
+
   {
     id: 417,
     name: "Alaska Pink",

@@ -12,7 +12,8 @@
     <link href="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -26,56 +27,161 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .gallery-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 40px;
+        }
+
+        .side-cards {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .side-card {
+            width: 60px;
+            height: 300px;
+            border-radius: 40px;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .side-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .side-card:hover {
+            width: 300px;
+        }
+
+        .side-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-container {
+                flex-direction: column;
+            }
+
+            .side-cards {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+
+        .section-title {
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s ease-in-out forwards;
+        }
+
+        .highlight {
+            color: #00AEEF;
+            /* Blue highlight color */
+        }
+
+        /* Animation Effects */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(1.1);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Animate paragraphs and list items */
+        .animated-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+    </style>
 </head>
 
 <body>
-   <!-- Topbar Start -->
-   <div class="container-fluid bg-dark py-3 custom-topbar">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white pr-3" href="">FAQs</a>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-3 custom-topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <!-- <a class="text-white pr-3" href="">FAQs</a>
                     <span class="text-white">|</span>
                     <a class="text-white px-3" href="">Help</a>
                     <span class="text-white">|</span>
-                    <a class="text-white pl-3" href="">Support</a>
-                    <span class="text-white pl-3">|</span>
-                    <a class="text-white pl-3" href="about.html">About Us</a>
-                    <span class="text-white pl-3">|</span>
-                    <a class="text-white pl-3" href="blog.html">Blog</a>
+                    <a class="text-white pl-3" href="">Support</a> -->
+                        <!-- <span class="text-white pl-3">|</span> -->
+                        <a class="text-white pl-3" href="about.html">About Us</a>
+                        <span class="text-white pl-3">|</span>
+                        <a class="text-white pl-3" href="blog.html">Blog</a>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-3" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-3" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-3" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-3" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-3" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-3" href="https://www.facebook.com/share/18szo4WKhJ/?mibextid=wwXIfr">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-3"
+                            href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-3" href="mailto:sanjeev9000@gmail.com">
+                            <i class="flaticon-email"></i>
+                        </a>
 
 
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-   </div>
-<!-- Topbar End -->
+    <!-- Topbar End -->
+
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
+    <div class="container-fluid position-relative nav-bar ">
         <div class="container-fluid position-relative" style="z-index: 9;">
             <nav
                 class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5 rounded-lg custom-navbar">
@@ -85,7 +191,9 @@
                     <!-- Add your logo here -->
                     <img src="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" alt="Logo" class="navbar-logo"
                         style="width: 70px; height: 70px; margin-right: 2px;">
-                    <h1 class=" display-5 text-white"><span class="text-primary">arble</span>Mart</h1>
+                    <h1 class=" display-5 text-white pl-2">
+                        <span class="text-primary">Marble</span>Mart
+                    </h1>
                 </a>
 
                 <!-- Navbar Toggler -->
@@ -107,9 +215,9 @@
                         <div class="nav-item dropdown">
                             <a href="project.html" class="nav-link ">FACTORY</a>
                             <!-- <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div> -->
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div> -->
                         </div>
 
 
@@ -117,41 +225,38 @@
                         <div class="nav-item dropdown">
                             <a href="collection.html" class="nav-link">COLLECTION</a>
                             <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IMPORTED MARBLE </a>
-                             
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div> -->
+                         
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div> -->
                         </div>
-                        
+
                         <!-- <div class="nav-item dropdown">
-                            <a href="./Indian Granite/Indian Granite.html" class="nav-link">ABOUT US</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
-                        </div> -->
+                        <a href="./Indian Granite/Indian Granite.html" class="nav-link">ABOUT US</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div> -->
                         <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">INDIAN Marble</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
-                        </div> -->
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">INDIAN Marble</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div> -->
 
                         <!-- Contact Link -->
                         <a href="contact.html" class="nav-item nav-link">CONTACT </a>
 
                         <div class="nav-item items-center justify-center px-3 pt-4">
                             <a href="https://yarratiles.com/" class="inline-block">
-                                <img 
-                                    src="Yarra.png" 
-                                    alt="Button icon"
-                                    class="h-7 w-7 rounded hover:scale-105 transition-transform"
-                                >
+                                <img src="Yarra.png" alt="Button icon"
+                                    class="h-7 w-7 rounded hover:scale-105 transition-transform">
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </nav>
@@ -161,9 +266,9 @@
 
 
 
-   <!-- Under Nav Start -->
-  
-<!-- Under Nav End -->
+    <!-- Under Nav Start -->
+
+    <!-- Under Nav End -->
 
 
     <!-- Page Header Start -->
@@ -187,96 +292,240 @@
 
 
     <!-- About Start -->
+
     <section class="py-5 relative ">
         <div class="container relative z-10 ">
             <div class="row gx-4 align-items-center justify-content-between">
                 <div class="col-md-5 order-2 order-md-1">
                     <div class="mt-5 mt-md-0">
                         <!-- <span class="text-muted"><h3>Manufacturing</h3></span> -->
-                        <p class="lead">We operate five factories of Marble and Granite in Rajasthan. Each factory is equipped with
-                            gang saws and state-of-the-art line polishing machines.</p>
-                        <p class="lead">We offer different stone finishes like Lappato Finish, Sand Blasting, Flamed & River Finish.</p>
+                        <p class="lead">35+ Years Experience In Marble Industry
+                            Our commitment to Quality Authenticity and our desire to bring you the best from around the
+                            world have made us pioneers in importing carefully curated Premier Quality Marble from the
+                            quarry straight to your homes, sourced from countries like Italy, Spain, Greece, Turkey,
+                            Brazil, Norway Etc.</p>
+
                     </div>
                 </div>
-                <div class="col-md-6 offset-md-1 order-1 order-md-2">
-                    <div class="row gx-3 gx-lg-3">
+                <div class="col-md-6 offset-md-1 order-1 order-md-2 ">
+                    <div class="row gx-3 gx-lg-3 d-lg-none ">
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3" src="https://www.jtmchina.com/upload/image/20210528/16221851466751997.jpg"></div>
+                            <div class="mb-2"><img class="img-fluid rounded-3"
+                                    src="https://www.jtmchina.com/upload/image/20210528/16221851466751997.jpg"></div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3" src="http://eximany.com/content/images/product/1200x1200/schind-16403-automatic-cutting-angled-marble-granite-cutting-machine-8-740b7d6c464c.jpg"></div>
+                            <div class="mb-2"><img class="img-fluid rounded-3"
+                                    src="http://eximany.com/content/images/product/1200x1200/schind-16403-automatic-cutting-angled-marble-granite-cutting-machine-8-740b7d6c464c.jpg">
+                            </div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-2 py-3"><img class="img-fluid rounded-3" src="https://www.vasyerp.com/image/manufacturing/marble-granite-stones.jpg"></div>
+                            <div class="mb-2 py-3"><img class="img-fluid rounded-3"
+                                    src="https://www.vasyerp.com/image/manufacturing/marble-granite-stones.jpg"></div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3" src="https://hanskullin.se/wp-content/uploads/2018/10/carrara_marble_quarries_2018c.jpg"></div>
+                            <div class="mb-2"><img class="img-fluid rounded-3"
+                                    src="https://hanskullin.se/wp-content/uploads/2018/10/carrara_marble_quarries_2018c.jpg">
+                            </div>
                         </div>
                     </div>
+                    <div class="container d-none d-md-block">
+                        <div class="gallery-container">
+                            <!-- Side Images -->
+                            <div class="side-cards">
+                                <div class="side-card ">
+                                    <img src="https://www.jtmchina.com/upload/image/20210528/16221851466751997.jpg"
+                                        alt="Forest">
+                                </div>
+                                <div class="side-card">
+                                    <img src="http://eximany.com/content/images/product/1200x1200/schind-16403-automatic-cutting-angled-marble-granite-cutting-machine-8-740b7d6c464c.jpg"
+                                        alt="Beach">
+                                </div>
+                                <div class="side-card">
+                                    <img src="https://www.bansarchina.com/wp-content/uploads/2020/05/Calacatta-Marble-Importing-from-China.png"
+                                        alt="City">
+                                </div>
+                                <div class="side-card">
+                                    <img src="https://hanskullin.se/wp-content/uploads/2018/10/carrara_marble_quarries_2018c.jpg"
+                                        alt="Mountains">
+                                </div>
+                                <div class="side-card">
+                                    <img src="https://pancholimarbles.com/images-slider/wide3.jpg" alt="City">
+                                </div>
+                                <div class="side-card">
+                                    <img src="https://5.imimg.com/data5/SELLER/Default/2020/11/EJ/FG/LE/91808054/rajasthan-white-marble-1000x1000.jpg"
+                                        alt="Mountains">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    
+
+
+
+
+
+    <section>
+        <div class="container my-5">
+            <div class="row">
+                <!-- Company Profile -->
+                <div class="col-md-4">
+                    <h3 class="section-title">Company <span class="highlight text-primary">Profile</span></h3>
+                    <p class="animated-text">
+                        Shreyansh <span class="highlight">Marbles</span> Pvt. Ltd. was established in 1984 in Abu Road,
+                        Rajasthan.
+                        The company is involved in the processing and trading of all types of Indian and Imported
+                        Marbles,
+                        Granites, & other stones, in standardized & custom sizes. Apart from Marble & Granite mines in
+                        Reodar,
+                        Rajasthan, we also have warehouses and showrooms located in Delhi, Kishangarh & Abu Road.
+                    </p>
+                    <h3 class="section-title">Our Office <span class="highlight text-primary">Address</span></h3>
+                    <p class="animated-text">
+                        <span class="highlight">Shreyansh
+                            Marbles Tiles Pvt. Ltd</span><br> B-63, Ambaji Ind. Area, Palanpur Ahmedabad
+                        Highway Road, ABU Road - 307 026 (Raj.) INDIA
+                    </p>
+
+
+                    <p class="animated-text">
+                        <span class="highlight">Anant Stones Pvt. Ltd</span><br> E-278-279, RIICO Growth Centre,
+                        Chandravati, Abu Road - 307026,
+                        Distt. Sirohi (Raj.)
+                        <a href="tel:+919982098223" class=""><br><i class="fa fa-phone-alt mr-2"></i>+91-99820 98223</a>
+
+                    </p>
+
+
+                    <p class="animated-text">
+                        <span class="highlight">Marble Mart
+                        </span><br> 4th Phase, Riico Industrial Area, Makrana Road,Pin-305801, <br>Madanganj
+                        Kishanghar,<br>Distt. Ajmer Rajasthan
+                    </p>
+                </div>
+
+                <!-- Why Choose Us -->
+                <div class="col-md-4">
+                    <h3 class="section-title">Why <span class="highlight text-primary">Choose Us</span></h3>
+                    <ul class="animated-text">
+                        <li>Premium range of products</li>
+                        <li>Efficient and prompt designing services</li>
+                        <li>Well-equipped manufacturing unit</li>
+                        <li>Service support of experienced artisans and craftsmen</li>
+                        <li>Spacious warehouse</li>
+                        <li>Customization offered</li>
+                        <li>300,000 sq.meter for Marble slabs</li>
+                        <li>800,000 sq.meter for Granite slabs</li>
+                        <li>We operate 5 factories of Marble and Granite in Rajasthan. Each factory is equipped with
+                            gang saws and state-of-theart line polishing machines</li>
+                        <li>We offer different stone finishes like Lappato Finish, Sand Blasting, Flamed & River Finish.
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Best Services -->
+                <div class="col-md-4">
+                    <h3 class="section-title ">Our <span class="highlight text-primary">Best Services</span></h3>
+                    <p class="animated-text">
+                        Marble Mart has an unparalleled legacy of providing the finest calibre authentic Marble and
+                        Natural Stone from all around the world.
+                    </p>
+                    <p class="animated-text"><strong>Major supplier of Nano in India</strong></p>
+                    <p class="animated-text"><strong>Stone carving</strong></p>
+                    <p class="animated-text"><strong>CNC engraving</strong></p>
+                    <p class="animated-text">
+                        Our commitment to Quality, Authenticity and our desire to bring you the best from around the
+                        world
+                        have made us pioneers in importing carefully curated Premier Quality Marble from the quarry
+                        straight
+                        to your homes, sourced from countries like Italy, Spain, Greece, Turkey, Brazil, Norway Etc.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Diagonal Cut Image -->
+
+        </div>
+
+
+    </section>
+
     <!-- About End -->
 
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-white py-1 px-sm-3 px-md-5">
-    <div class="row pt-4">
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="text-primary mb-4">Get In Touch</h4>
-            <p><i class="fa fa-map-marker-alt mr-2"></i>Asola Farm Rd, Asola Homes,
-                Asola, New Delhi, Delhi
-                110074</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>+91 99100 59659</p>
-            <p><i class="fa fa-envelope mr-2"></i>sanjeev9000@gmail.com</p>
-            <div class="d-flex justify-content-start mt-4">
-                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="text-primary mb-4">Quick Links</h4>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                <a class="text-white mb-2" href="Indian Granite/Indian Granite.html"><i class="fa fa-angle-right mr-2"></i>Indian Granite</a>
-                <a class="text-white mb-2" href="ImportedMarbles/Imported Marbles.html"><i class="fa fa-angle-right mr-2"></i>Imported Marbles</a>
-                <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="text-primary mb-4">Popular Marbles</h4>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="gallery/gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery 1</a>
-                <a class="text-white mb-2" href="gallery/gallery2.html"><i class="fa fa-angle-right mr-2"></i>Gallery 2</a>
-                <a class="text-white mb-2" href="Onxy/Onxy.html"><i class="fa fa-angle-right mr-2"></i>Onxy</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="text-primary mb-4">Map</h4>
-            <div class="rounded-lg overflow-hidden">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d779.2083329190899!2d77.1938521592272!3d28.460901835191862!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1733127802495!5m2!1sen!2sin"
-                    width="1500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="container border-top border-secondary pt-5">
-        <p class="m-0 text-center text-white">
-            &copy; <a class="text-white font-weight-bold" href="#">Marble Mart</a>. All Rights Reserved.
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-1 px-sm-3 px-md-5">
+        <div class="row pt-4">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Khasra No. 383,
+                    Near Shanidham Mandir,
+                    Shani Mandir Road,<br>Main Chattarpur Road,
+                    <br>New Delhi - 110074
+                </p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+91 99100 59659, 95601 58551</p>
 
-        </p>
+                <p><i class="fa fa-envelope mr-2"></i>sanjeev9000@gmail.com</p>
+                <p><i class="fa fa-envelope mr-2"></i>bgaurav1@rediffmail.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/share/18szo4WKhJ/?mibextid=wwXIfr"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="mailto:sanjeev9000@gmail.com"><i
+                            class="flaticon-email"></i></a>
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;"
+                        href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="Indian Granite/Indian Granite.html"><i
+                            class="fa fa-angle-right mr-2"></i>Indian Granite</a>
+                    <a class="text-white mb-2" href="ImportedMarbles/Imported Marbles.html"><i
+                            class="fa fa-angle-right mr-2"></i>Imported Marbles</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Popular Marbles</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="gallery/gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery
+                        1</a>
+                    <a class="text-white mb-2" href="gallery/gallery2.html"><i
+                            class="fa fa-angle-right mr-2"></i>Gallery 2</a>
+                    <a class="text-white mb-2" href="Onxy/Onxy.html"><i class="fa fa-angle-right mr-2"></i>Onxy</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Map</h4>
+                <div class="rounded-lg overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d779.2083329190899!2d77.1938521592272!3d28.460901835191862!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1733127802495!5m2!1sen!2sin"
+                        width="1500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container border-top border-secondary pt-5">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">Marble Mart</a>. All Rights Reserved.
+
+            </p>
+        </div>
     </div>
-   </div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -297,6 +546,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

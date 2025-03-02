@@ -83,11 +83,14 @@
             transition: all 0.5s ease-in-out;
             cursor: pointer;
             position: relative;
+            
         }
         .material:hover {
             width: 300px;
-            height: 300px;
-            border-radius: 20px;
+            height: 500px;
+            border-radius: 40px;
+            
+            
         }
         .material:hover::after {
             content: attr(data-name);
@@ -163,6 +166,53 @@
       font-size: 1.2rem;
       color: white;
     }
+    .logo-slider {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: transparent; /* Transparent background */
+            padding: 20px 0;
+        }
+
+        /* Moving animation */
+        .logo-slider .logos {
+            display: flex;
+            gap: 80px; /* Adjusted gap for better spacing */
+            animation: scroll 30s linear infinite; /* Slower speed */
+        }
+
+        /* Scrolling effect */
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Make images uniform */
+        .logo-slider img {
+            height: 160px; /* Default size */
+            max-width: 200px;
+            object-fit: contain;
+            opacity: 0.9;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect */
+        .logo-slider img:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .logo-slider .logos {
+                gap: 30px; /* Reduce spacing on smaller screens */
+                animation: scroll 12s linear infinite; /* Adjust speed for better experience */
+            }
+            .logo-slider img {
+                height: 80px; /* Adjust logo size for mobile */
+                max-width: 120px;
+            }
+        }
       </style>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark py-3 custom-topbar">
@@ -170,12 +220,12 @@
             <div class="row">
                 <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-white pr-3" href="">FAQs</a>
+                        <!-- <a class="text-white pr-3" href="">FAQs</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white pl-3" href="">Support</a>
-                        <span class="text-white pl-3">|</span>
+                        <a class="text-white pl-3" href="">Support</a> -->
+                        <!-- <span class="text-white pl-3">|</span> -->
                         <a class="text-white pl-3" href="about.html">About Us</a>
                         <span class="text-white pl-3">|</span>
                         <a class="text-white pl-3" href="blog.html">Blog</a>
@@ -184,7 +234,7 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-white px-3" href="">
+                        <a class="text-white px-3" href="https://www.facebook.com/share/18szo4WKhJ/?mibextid=wwXIfr">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a class="text-white px-3" href="">
@@ -193,12 +243,13 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="text-white px-3" href="">
+                        <a class="text-white px-3" href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-white pl-3" href="">
-                            <i class="fab fa-youtube"></i>
+                        <a class="text-white pl-3" href="mailto:sanjeev9000@gmail.com">
+                            <i class="flaticon-email"></i>
                         </a>
+                        
 
 
                     </div>
@@ -221,7 +272,8 @@
                     <!-- Add your logo here -->
                     <img src="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" alt="Logo" class="navbar-logo"
                         style="width: 70px; height: 70px; margin-right: 2px;">
-                    <h1 class=" display-5 text-white"><span class="text-primary">arble</span>Mart</h1>
+                    <h1 class=" display-5 text-white pl-2">
+                        <span class="text-primary">Marble</span>Mart</h1>
                 </a>
 
                 <!-- Navbar Toggler -->
@@ -487,7 +539,7 @@
             <div class="row">
                 <div class="col-lg-7 mt-5 py-5 pr-lg-5">
                     <h6 class="text-primary font-weight-normal text-uppercase mb-3">Why Choose Us?</h6>
-                    <h1 class="mb-4 section-title">25+ Years Experience In Marble Industry</h1>
+                    <h1 class="mb-4 section-title">35+ Years Experience In Marble Industry</h1>
                     <p class="mb-4">Our commitment to Quality, Authenticity and our
                         desire to bring you the best from around the world
                         have made us pioneers in importing carefully curated
@@ -520,28 +572,7 @@
     </div>
     <!-- Features End -->
 
-    <!-- Card start  -->
-     
-     <!-- Statistics Section -->
-  <!-- <section class="stats-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 stats-box">
-            
-          <div class="stats-number" data-target="2000">0</div>
-          <div class="stats-label">Projects Completed</div>
-        </div>
-        <div class="col-md-4 stats-box">
-          <div class="stats-number" data-target="750">0</div>
-          <div class="stats-label">Cups of Coffee</div>
-        </div>
-        <div class="col-md-4 stats-box">
-          <div class="stats-number" data-target="10000">0</div>
-          <div class="stats-label">Happy Clients</div>
-        </div>
-      </div>
-    </div>
-  </section> -->
+    
 
   <section class="content-section">
     <div class="container">
@@ -553,7 +584,7 @@
           <h2 class="section-title">Collections</h2>
           <!-- <p>With the vision to achieve perfection in our craft and provide the best to our customers, our own Stone Throw was set up in 1991 in Behror, on the Delhi-Jaipur Highway.</p> -->
            <p>Step into a world where nature’s artistry meets human craftsmanship. At Marble Mart, every slab tells a story of elegance and endurance. From the pristine whites of Carrara to the deep, rich hues of Emperador, our collection is curated to bring luxury and sophistication to every space.</p>
-          <button class="btn btn-view">VIEW</button>
+          <a href="collection.html" class="btn btn-view">VIEW</a>
         </div>
       </div>
 
@@ -565,7 +596,9 @@
           <h2 class="section-title">The Grand Showroom</h2>
           <p>A place where vision transforms into reality. Our flagship showroom in Mayapuri, New Delhi, is more than just a display—it’s an experience center, featuring the finest marbles sourced from across the globe. Walk through carefully curated displays, feel the textures, and find the perfect stone to elevate your interiors.</p>
           <!-- <p>Marble City has reached an important milestone by launching its spectacular showroom with the largest warehouse and an experience center in Mayapuri (Rajouri Garden), New Delhi.</p> -->
-          <button class="btn btn-view">VIEW</button>
+           
+          <a href="gallery/gallery.html" class="btn btn-view">VIEW</a>
+          
         </div>
       </div>
 
@@ -577,7 +610,7 @@
           <h2 class="section-title">Precision Crafting at Our Factory</h2>
           
       <p>Crafted to perfection, our state-of-the-art facility in Behror is where raw stone transforms into masterpieces. Using cutting-edge technology, we ensure precise cuts, flawless finishes, and unmatched durability, preserving the natural essence of every marble slab.</p> 
-          <button class="btn btn-view">VIEW</button>
+          <a  href="project.html" class="btn btn-view">VIEW</a>
         </div>
       </div>
 
@@ -588,7 +621,7 @@
         <div class="col-md-6 order-md-1">
           <h2 class="section-title">The Gallery of Grandeur</h2>
           <p>Marble isn’t just a material—it’s a statement. Our Gallery showcases how natural stone can transform homes, hotels, and commercial spaces into architectural wonders. Explore inspirations and discover how marble can redefine elegance in every setting</p>
-          <button class="btn btn-view">VIEW</button>
+          <a  href="gallery/gallery2.html"  class="btn btn-view">VIEW</a>
         </div>
       </div>
 
@@ -599,31 +632,11 @@
         <div class="col-md-6">
           <h2 class="section-title">Innovation Hub</h2>
           <p>Pushing the boundaries of tradition, our Innovation Hub explores sustainable practices, next-gen treatments, and smart stone technologies. With a focus on eco-friendly solutions and enhanced durability, we redefine the way marble is processed and preserved for generations to come.</p>
-          <button class="btn btn-view">VIEW</button>
+          <a class="btn btn-view" href="blog.html">VIEW</a>
         </div>
       </div>
 
-      <!-- <div class="row align-items-center mb-5 fade-in" id="block6">
-        <div class="col-md-6 order-md-2">
-          <img src="https://marblecity.in/images/collection.jpg" alt="Customer Lounge">
-        </div>
-        <div class="col-md-6 order-md-1">
-          <h2 class="section-title">CUSTOMER LOUNGE</h2>
-          <p>Relax and experience our curated product offerings in the comfort of our elegant Customer Lounge.</p>
-          <button class="btn btn-view">VIEW</button>
-        </div>
-      </div> -->
-
-      <!-- <div class="row align-items-center fade-in" id="block7">
-        <div class="col-md-6">
-          <img src="https://marblecity.in/images/collection.jpg" alt="Experience Center">
-        </div>
-        <div class="col-md-6">
-          <h2 class="section-title">EXPERIENCE CENTER</h2>
-          <p>Immerse yourself in a comprehensive showcase of our finest collections at the Experience Center.</p>
-          <button class="btn btn-view">VIEW</button>
-        </div>
-      </div> -->
+      
     </div>
   </section>
 
@@ -935,116 +948,7 @@
     
 
 
-    <!-- Marble small cards Start -->
-    <!-- <div class="container-fluid projectborder-custom ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div
-                        class="py-5 px-4 h-100 bg-primary d-flex flex-column align-items-center justify-content-center">
-                        <h6 class="text-white font-weight-normal text-uppercase mb-3"></h6>
-                        <h1 class="mb-0 text-center ">" Transform your space with the timeless elegance of marble –
-                            where luxury meets durability. Invest in beauty that lasts "
-                        </h1>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-6 p-0 py-sm-5 pt-3">
-                    <div class="owl-carousel team-carousel position-relative p-0 py-sm-5">
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="Indian Granite/Indian Granite/1.CRYSTAL BLUE.png" alt="">
-                                
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">CRYSTAL BLUE</h5>
-
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="ImportedMarbles/Imported Marbles/11.Statuario.png" alt="">
-                                
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Statuario</h5>
-
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="ImportedMarbles/Imported Marbles/14.Dark Emperador.png" alt="">
-                                
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Dark Emperador</h5>
-
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="ImportedMarbles/Imported Marbles/17.Dayna.png" alt="">
-                                
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Dayna</h5>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Marble small card End -->
-
-
-
-    <!-- Testimonial Start -->
-    <!-- <div class="container-fluid"
-        style="background-image: url('https://wallpapers.com/images/featured/marble-j719feqvjpd876qq.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 py-5 pr-md-5">
-                    <h6 class=" font-weight-normal text-uppercase mb-3 pt-5">Testimonial</h6>
-                    <h1 class="mb-4 section-title">What Our Clients Say</h1>
-                    <div class="owl-carousel testimonial-carousel position-relative pb-5 mb-md-5">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/g1.jpeg"
-                                    style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h5>Esha Kapoor</h5>
-                                    <i>Teacher</i>
-                                </div>
-                            </div>
-                            <p class="text-bl">The quality of the marble we received was exceptional. The finish was flawless, and it added a touch of elegance to our space. The team was professional, ensuring timely delivery and proper installation. Highly recommend their services for anyone looking for premium marble</p>
-                        </div>
-                        <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/b1.jpeg"
-                                    style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h5>Kapil Sharma</h5>
-                                    <i>Businessman</i>
-                                </div>
-                            </div>
-                            <p class="m-0">We are thrilled with the stunning marble we chose for our home. Its durability and luxurious appearance have exceeded our expectations. The team provided excellent support throughout the process, from selection to installation. A perfect choice for anyone seeking elegance and quality</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden">
-                        <img class="h-100 rounded"
-                            src="https://images.pexels.com/photos/10947260/pexels-photo-10947260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Testimonial End -->
+ 
      
       
         
@@ -1069,8 +973,8 @@
                 <div class="material-section d-none d-sm-flex">
                     <div class="material" style="background-image: url('IndianMarbles/IndianMarbles/1\ Ambaji\ White\ 1.jpg');" data-name="Marble"></div>
                     <div class="material" style="background-image: url('Nano/Nano/\(1\)\ NANO\ COLOURED.jpg');" data-name="Nano"></div>
-                    <div class="material" style="background-image: url('./Onxy/Onxy/2.ZR001.png');" data-name="Onxy"></div>
-                    <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/4\ UDAIPUR_GREEN.jpg');" data-name="IndianMarbles"></div>
+                    <div class="material" style="background-image: url('IndianMarbles/IndianMarbles/4\ UDAIPUR_GREEN.jpg');" data-name="IndianMarbles"></div>
+                    <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/3\ Ambaji\ White\ 3.jpg');" data-name="IndianMarbles"></div>
                     <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/5\ JAISALMER\ \ YELLOW.jpg');" data-name="Jaisalmer yellow"></div>
                 </div>
             </div>
@@ -1121,8 +1025,27 @@
 
 
             </div>
+            <div class="container my-5">
+                <h2 class="text-center text-black mb-4">Our Happy Clients</h2>
+                <div class="logo-slider">
+                    <div class="logos d-flex">
+                        <img src="logo/DLF.png" alt="Client 1">
+                        <img src="logo/Anant raj.png" alt="Client 2">
+                        <img src="logo/M3M.png" alt="Client 3">
+                        <img src="logo/trehan.png" alt="Client 4">
+                        <img src="logo/Tata.png" alt="Client 5">
+                        <img src="logo/Hdfc.png" alt="Client 6">
+                        <img src="logo/Omax.png" alt="Client 7" >
+                        <img src="logo/ansal.png" alt="Client 8">
+                        <img src="logo/godrej.png" alt="Client 9">
+                        <img src="logo/Forties.png" alt="Client 10" >
+                    </div>
+                </div>
+            </div>
             <!-- Gallery -->
+             
         </div>
+        
     </div>
 
 
@@ -1133,22 +1056,25 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-1 px-sm-3 px-md-5">
         <div class="row pt-4">
-            <div class="col-lg-3 col-md-6 mb-5">
+            <div class="col-lg-3 col-md-6">
                 <h4 class="text-primary mb-4">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Asola Farm Rd, Asola Homes,
-                    Asola, New Delhi, Delhi
-                    110074</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+91 99100 59659</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Khasra No. 383,
+                      Near Shanidham Mandir,
+                      Shani Mandir Road,<br>Main Chattarpur Road,
+                      <br>New Delhi - 110074</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+91 99100 59659, 95601 58551</p>
+                
                 <p><i class="fa fa-envelope mr-2"></i>sanjeev9000@gmail.com</p>
+                <p><i class="fa fa-envelope mr-2"></i>bgaurav1@rediffmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
                         style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        style="width: 38px; height: 38px;" href="https://www.facebook.com/share/18szo4WKhJ/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        style="width: 38px; height: 38px;" href="mailto:sanjeev9000@gmail.com"><i class="flaticon-email"></i></a>
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                        style="width: 38px; height: 38px;" href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -1165,7 +1091,7 @@
                 <h4 class="text-primary mb-4">Popular Marbles</h4>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="gallery/gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery 1</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Gallery 2</a>
+                    <a class="text-white mb-2" href="gallery/gallery2.html"><i class="fa fa-angle-right mr-2"></i>Gallery 2</a>
                     <a class="text-white mb-2" href="Onxy/Onxy.html"><i class="fa fa-angle-right mr-2"></i>Onxy</a>
                 </div>
             </div>
