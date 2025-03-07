@@ -13,6 +13,7 @@
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap"
         rel="stylesheet">
+        
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -20,7 +21,7 @@
     <!-- Flaticon Font -->
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
@@ -37,6 +38,22 @@
 <body>
 
     <style>
+         #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            #map {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #map {
+                height: 300px;
+            }
+        }
         
         .section {
             display: none;
@@ -184,7 +201,7 @@
         /* Scrolling effect */
         @keyframes scroll {
             from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
+            to { transform: translateX(-240%); }
         }
 
         /* Make images uniform */
@@ -734,6 +751,30 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="card bg-dark text-white">
+                            <img src="ImportedMarbles/Imported Marbles/19.Grey 1.png" class="card-img-top" alt="White Marble">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Grey Marble </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-dark text-white">
+                            <img src="ImportedMarbles/Imported Marbles/28.Armani brown.png" class="card-img-top" alt="White Marble">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Brown Marble </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4">
+                        <div class="card bg-dark text-white">
+                            <img src="ImportedMarbles/Imported Marbles/31.French Brown.png" class="card-img-top" alt="White Marble">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Brown Marble </h5>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </section>
     
@@ -765,6 +806,9 @@
                     </div>
                 </div>
             </section>
+            
+            
+            
         </div>
     
         <script>
@@ -783,183 +827,53 @@
                 });
             });
         </script>
-     </section>
+     
 
       <!-- scrolling gallery  end-->
 
 
-    <!-- Projects Start -->
-    <div class="container-fluid py-5 projectborder-custom">
-
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col text-center mb-4">
-                    <h3 class="text-primary font-weight-normal text-uppercase mb-3">Marbles</h3>
-                    <h1 class="mb-4 text-white font-serif">Best Marble Collection in India</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-primary m-1 active" data-filter="*">Marble</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".first">Granite</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".second">Imported Marbles</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".third">Nano</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row mx-1 portfolio-container">
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid"
-                                src="https://images.unsplash.com/photo-1553949333-0510da388b82?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hcmJsZXxlbnwwfHwwfHx8MA%3D%3D"
-                                alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid"
-                                src="https://images.unsplash.com/photo-1551043047-1d2adf00f3fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFyYmxlfGVufDB8fDB8fHww"
-                                alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid"
-                                src="https://images.unsplash.com/photo-1551554781-c46200ea959d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFyYmxlfGVufDB8fDB8fHww"
-                                alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid"
-                                src="https://images.unsplash.com/photo-1532644440111-bc94f97955c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hcmJsZXxlbnwwfHwwfHx8MA%3D%3D"
-                                alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid"
-                                src="https://images.unsplash.com/photo-1532901074349-dc9d1505589c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
-                                alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
-                    <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid"
-                                src="https://images.unsplash.com/photo-1549834146-0702b38f1bed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
-                                alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+    <!-- Export Countries Start -->
+    <div class="container-fluid ">
+        <div class="container text-center ">
+            <h2 class="text-white pb-3">Export Countries</h2>
+            <div id="map"></div>
         </div>
+    
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            var map = L.map('map').setView([20, 10], 2); // Centering the map
+    
+            // Using OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+    
+            // Locations
+            var locations = [
+                { name: "United Arab Emirates (UAE)", coords: [25.276987, 55.296249] },
+                { name: "South Africa", coords: [-30.5595, 22.9375] },
+                { name: "Iraq", coords: [33.3152, 44.3661] },
+                { name: "Slovakia", coords: [48.6690, 19.6990] },
+                { name: "Ecuador", coords: [-1.8312, -78.1834] }
+            ];
+    
+            // Adding markers
+            locations.forEach(loc => {
+                L.marker(loc.coords).addTo(map)
+                    .bindPopup(`<b>${loc.name}</b>`).openPopup();
+            });
+        </script>
+         <div class="container text-center ">
+            <h2 class="text-white px-2 pt-4">UAE | South Africa | Iraq | Slovakia | Ecuador</h2>
+           
+        </div>
+
+
     </div>
+</section>
     <!-- Projects End -->
 
-    <!-- banner  -->
-    <!-- <section class="">
-        <section class="black pt-3 pb-3">
-            <div class="H1">
-                <h1>Exclusive Marble Collection</span></h1>
-            </div>
-        </section>
-
-        <style>
-            /* Remove padding and center the section */
-            .black {
-                background-color: black;
-                height: 100;
-                /* Full viewport height */
-                display: flex;
-                justify-content: center;
-                /* Center horizontally */
-                align-items: center;
-                /* Center vertically */
-                margin: 0;
-                /* Remove default margin */
-                padding: 0;
-                /* Remove padding */
-            }
-
-            /* Style for the heading */
-            .H1 h1 {
-                font-size: 70px;
-                /* Adjust as needed */
-                font-weight: bold;
-                background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f);
-                background-size: 200% 100%;
-                justify-content: center;
-                /* Center horizontally */
-                animation: gradientAnimation 3s ease infinite;
-                /* Animation applied */
-                -webkit-background-clip: text;
-                color: transparent;
-                margin: 0;
-                /* Remove margin */
-
-            }
-
-            /* Keyframes to animate the gradient */
-            @keyframes gradientAnimation {
-                0% {
-                    background-position: 200% 0%;
-                }
-
-                50% {
-                    background-position: -200% 0%;
-                }
-
-                100% {
-                    background-position: 200% 0%;
-                }
-            }
-
-            /* Ensure span inherits the same gradient effect */
-            .H1 span {
-                background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f);
-                /* Same gradient */
-                background-size: 200% 100%;
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-        </style>
-
-    </section> -->
-    <!-- banner  END-->
-
     
-
-
- 
-     
-      
-        
-            
-       
-
-      
-          
-     
-
-
 
     <!-- Blog Start -->
     <div class="container-fluid bg-light pt-5" s
@@ -1038,10 +952,17 @@
                         <img src="logo/Omax.png" alt="Client 7" >
                         <img src="logo/ansal.png" alt="Client 8">
                         <img src="logo/godrej.png" alt="Client 9">
-                        <img src="logo/Forties.png" alt="Client 10" >
+                        <img src="logo/Forties.png" alt="Client 10">
+                        <img src="logo/aaof.png" alt="Client 13">
+                        <img src="logo/sarovar.png" alt="Client 14" >
+                        <img src="logo/lalit.png" alt="Client 15">
+                        <img src="logo/Dhanuka.png" alt="Client 16">
+                        <img src="logo/Bharti.png" alt="Client 17">
+                        <img src="logo/GMR.png" alt="Client 18">
                     </div>
                 </div>
             </div>
+            
             <!-- Gallery -->
              
         </div>
