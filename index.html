@@ -13,7 +13,7 @@
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap"
         rel="stylesheet">
-        
+
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,14 +31,14 @@
     <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
 
-    
+
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
 
     <style>
-         #map {
+        #map {
             height: 500px;
             width: 100%;
         }
@@ -54,43 +54,51 @@
                 height: 300px;
             }
         }
-        
+
         .section {
             display: none;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            
-            
+
+
         }
+
         .active-section {
             display: block;
             opacity: 1;
             transform: translateY(0);
         }
+
         .nav-link {
             color: white !important;
             cursor: pointer;
         }
+
         .nav-link.active {
             color: red !important;
         }
+
         .card {
-    width: 400px; /* Set a fixed width */
-    height: 320px; /* Set a fixed height */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.material-section {
+            width: 400px;
+            /* Set a fixed width */
+            height: 320px;
+            /* Set a fixed height */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .material-section {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
             padding: 50px;
         }
+
         .material {
             width: 120px;
             height: 120px;
@@ -100,15 +108,17 @@
             transition: all 0.5s ease-in-out;
             cursor: pointer;
             position: relative;
-            
+
         }
+
         .material:hover {
             width: 300px;
             height: 500px;
             border-radius: 40px;
-            
-            
+
+
         }
+
         .material:hover::after {
             content: attr(data-name);
             position: absolute;
@@ -123,90 +133,113 @@
             border-radius: 5px;
         }
 
-.card-img-top {
-    width: 100%; /* Make sure the image fits the card */
-    height: 250px; /* Set a fixed height for uniformity */
-    object-fit: cover; /* Ensure the image scales properly */
-}
+        .card-img-top {
+            width: 100%;
+            /* Make sure the image fits the card */
+            height: 250px;
+            /* Set a fixed height for uniformity */
+            object-fit: cover;
+            /* Ensure the image scales properly */
+        }
 
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         }
-    
-    .content-section {
-    padding: 4rem 0;
-    background-color: black;
-}
-    .content-section img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-    }
-    .section-title {
-      font-size: 2rem;
-      color: #FFC107;
-    }
-    .btn-view {
-      background: transparent;
-      border: 1px solid white;
-      color: white;
-    }
-    .btn-view:hover {
-      background: #FFC107;
-      color: black;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 2s ease, transform 3s ease;
-    }
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(1);
-    }
-    /* Statistics Section */
-    .stats-section {
-      background: #1a1a1a;
-      padding: 4rem 0;
-      text-align: center;
-    }
-    .stats-box {
-      margin: 2rem 0;
-    }
-    .stats-number {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #FFC107;
-    }
-    .stats-label {
-      font-size: 1.2rem;
-      color: white;
-    }
-    .logo-slider {
+
+        .content-section {
+            padding: 4rem 0;
+            background-color: black;
+        }
+
+        .content-section img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #FFC107;
+        }
+
+        .btn-view {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-view:hover {
+            background: #FFC107;
+            color: black;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 2s ease, transform 3s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(1);
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            background: #1a1a1a;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .stats-box {
+            margin: 2rem 0;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FFC107;
+        }
+
+        .stats-label {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .logo-slider {
             overflow: hidden;
             white-space: nowrap;
             position: relative;
-            background: transparent; /* Transparent background */
+            background: transparent;
+            /* Transparent background */
             padding: 20px 0;
         }
 
         /* Moving animation */
         .logo-slider .logos {
             display: flex;
-            gap: 80px; /* Adjusted gap for better spacing */
-            animation: scroll 30s linear infinite; /* Slower speed */
+            gap: 80px;
+            /* Adjusted gap for better spacing */
+            animation: scroll 30s linear infinite;
+            /* Slower speed */
         }
 
         /* Scrolling effect */
         @keyframes scroll {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-240%); }
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-240%);
+            }
         }
 
         /* Make images uniform */
         .logo-slider img {
-            height: 160px; /* Default size */
+            height: 160px;
+            /* Default size */
             max-width: 200px;
             object-fit: contain;
             opacity: 0.9;
@@ -222,15 +255,19 @@
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .logo-slider .logos {
-                gap: 30px; /* Reduce spacing on smaller screens */
-                animation: scroll 12s linear infinite; /* Adjust speed for better experience */
+                gap: 30px;
+                /* Reduce spacing on smaller screens */
+                animation: scroll 12s linear infinite;
+                /* Adjust speed for better experience */
             }
+
             .logo-slider img {
-                height: 80px; /* Adjust logo size for mobile */
+                height: 80px;
+                /* Adjust logo size for mobile */
                 max-width: 120px;
             }
         }
-      </style>
+    </style>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark py-3 custom-topbar">
         <div class="container">
@@ -260,13 +297,14 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="text-white px-3" href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr">
+                        <a class="text-white px-3"
+                            href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a class="text-white pl-3" href="mailto:sanjeev9000@gmail.com">
                             <i class="flaticon-email"></i>
                         </a>
-                        
+
 
 
                     </div>
@@ -290,7 +328,8 @@
                     <img src="logo/Screenshot 2024-12-01 at 12.09.10 AM-modified.png" alt="Logo" class="navbar-logo"
                         style="width: 70px; height: 70px; margin-right: 2px;">
                     <h1 class=" display-5 text-white pl-2">
-                        <span class="text-primary">Marble</span>Mart</h1>
+                        <span class="text-primary">Marble</span>Mart
+                    </h1>
                 </a>
 
                 <!-- Navbar Toggler -->
@@ -328,7 +367,7 @@
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div> -->
                         </div>
-                        
+
                         <!-- <div class="nav-item dropdown">
                             <a href="./Indian Granite/Indian Granite.html" class="nav-link">ABOUT US</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -349,14 +388,11 @@
 
                         <div class="nav-item items-center justify-center px-3 pt-4">
                             <a href="https://yarratiles.com/" class="inline-block">
-                                <img 
-                                    src="Yarra.png" 
-                                    alt="Button icon"
-                                    class="h-7 w-7 rounded hover:scale-105 transition-transform"
-                                >
+                                <img src="Yarra.png" alt="Button icon"
+                                    class="h-7 w-7 rounded hover:scale-105 transition-transform">
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </nav>
@@ -372,16 +408,15 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100"
-                        src="https://coolwallpapers.me/picsup/5744211-marble-wallpapers.jpg"
-                        alt="Image">
+                    <img class="w-100" src="https://coolwallpapers.me/picsup/5744211-marble-wallpapers.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 800px;">
                             <h4 class="text-primary text-uppercase font-weight-normal mb-md-3">Marble Mart
                             </h4>
                             <h3 class="display-3 text-white mb-md-4">Discover the Beauty
                                 of Natural Stones</h3>
-                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn More</a>
+                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn
+                                More</a>
                         </div>
                     </div>
                 </div>
@@ -395,7 +430,8 @@
                             </h4>
                             <h3 class="display-3 text-white mb-md-4">Elegance in Every Stone, Timeless Beauty in Every
                                 Surface</h3>
-                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn More</a>
+                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn
+                                More</a>
                         </div>
                     </div>
                 </div>
@@ -408,7 +444,8 @@
                             <h4 class="text-primary text-uppercase font-weight-normal mb-md-3">Marble Mart
                             </h4>
                             <h3 class="display-3 text-white mb-md-4">From Nature's Wonders to Your Home's Elegance</h3>
-                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn More</a>
+                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn
+                                More</a>
                         </div>
                     </div>
                 </div>
@@ -421,7 +458,8 @@
                             <h4 class="text-primary text-uppercase font-weight-normal mb-md-3">Marble Mart
                             </h4>
                             <h3 class="display-3 text-white mb-md-4">Stay At Home In Peace</h3>
-                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn More</a>
+                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn
+                                More</a>
                         </div>
                     </div>
                 </div>
@@ -434,7 +472,8 @@
                             <h4 class="text-primary text-uppercase font-weight-normal mb-md-3">Marble Mart
                             </h4>
                             <h3 class="display-3 text-white mb-md-4">Stone by Stone, Crafting Timeless Luxury</h3>
-                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn More</a>
+                            <a href="collection.html" class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4">Learn
+                                More</a>
                         </div>
                     </div>
                 </div>
@@ -491,21 +530,31 @@
                         <h3 class="font-weight-normal text-uppercase text-white mb-3 ">Our Premium range of products
                         </h3>
                         <h1 class="mb-4 section-title text-white">A Stone Solution for Every Project, Marble Mart is
-                            your trusted supplier of premium natural stones - Granite, Italian-imported, and Nano
-                            Stones.</h1>
+                            your trusted supplier of premium natural stones - Indian & Imported Granite,
+                            Italian-imported marble, India marble, Nano stone, Quartz </h1>
                         <a href="" class="btn btn-primary mt-3 py-2 px-4">View More</a>
                     </div>
                     <div class="col-lg-6 p-0 pt-5 pt-lg-0">
                         <div class="owl-carousel service-carousel position-relative">
                             <div class="px-2">
-                                <img src="https://www.stoneadd.com/photo/upload/marketing/MontmartreMarbleJPG20171214142735.jpg"
+                                <img src="Indian Granite/Indian Granite/11.Cera Grey.png"
+                                
                                     alt="" class="img-fluid rounded">
                             </div>
                             <div class="px-2">
-                                <img src="img/1.png" alt="" class="img-fluid rounded">
+                                <img src="Synthetic  Onxy/Onxy/11.Mango Onyx.png" alt="" class="img-fluid rounded">
                             </div>
                             <div class="px-2">
-                                <img src="img/2.png" alt="" class="img-fluid rounded">
+                                <img src="Natural Onxy/Onxy/19.Onxy 2.png" alt="" class="img-fluid rounded">
+                            </div>
+                            <div class="px-2">
+                                <img src="Natural Onxy/Onxy/12.Tiger onyx.png" alt="" class="img-fluid rounded">
+                            </div>
+                            <div class="px-2">
+                                <img src="Indian Granite/Indian Granite/8.Russian pink.png" alt="" class="img-fluid rounded">
+                            </div>
+                            <div class="px-2">
+                                <img src="Natural Onxy/Onxy/8.White Onyx.png"" class="img-fluid rounded">
                             </div>
                         </div>
                     </div>
@@ -565,14 +614,36 @@
                         Greece, Turkey, Brazil, Norway Etc.</p>
                     <ul class="list-inline">
                         <li>
-                            <h5><i class="far fa-check-square text-primary mr-3"></i>Stone carving</h5>
+                            <h5><i class="far fa-check-square text-primary mr-3"></i>Own Well Equipped Manufacturing
+                                Facility </h5>
                         </li>
                         <li>
-                            <h5><i class="far fa-check-square text-primary mr-3"></i>CNC engraving</h5>
+                            <h5><i class="far fa-check-square text-primary mr-3"></i>Customisation</h5>
                         </li>
                         <li>
-                            <h5><i class="far fa-check-square text-primary mr-3"></i>Customer Satisfaction</h5>
+                            <h5><i class="far fa-check-square text-primary mr-3"></i>In House CNC Carving and Engraving
+                            </h5>
                         </li>
+                        <li>
+                            <h5><i class="far fa-check-square text-primary mr-3"></i>One Stop Solution For</h5>
+                        </li>
+                        <ul class="list-none space-y-2">
+
+                            <ul class="pl-2 space-y-1 font-bold text-base">
+                                <li>Indian & Imported Granite</li>
+                                <li>Italian-Imported Marble</li>
+                                <li>Indian Marble</li>
+                                <li>Nano Stone</li>
+                                <li>Quartz</li>
+                                <li>Tiles</li>
+
+
+                            </ul>
+                        </ul>
+
+                        </li>
+
+
                     </ul>
                     <a href="" class="btn btn-primary mt-3 py-2 px-4">View More</a>
                 </div>
@@ -580,7 +651,7 @@
                     <div
                         class="d-flex flex-column align-items-center  justify-content-center h-100 overflow-hidden shadow-xl">
                         <img class="h-100 w-100 "
-                            src="https://static.vecteezy.com/system/resources/previews/022/451/624/large_2x/luxury-marble-texture-background-white-black-gold-natural-stone-color-material-pattern-ai-generated-photo.jpg"
+                            src="https://img.freepik.com/free-photo/blue-gold-marble-textured-background_53876-128500.jpg?t=st=1741786974~exp=1741790574~hmac=00739541cc2a1c98d9a40494a66431660d48b7588de291fd124856ee3f421f3f&w=996"
                             alt="">
                     </div>
                 </div>
@@ -589,237 +660,102 @@
     </div>
     <!-- Features End -->
 
-    
 
-  <section class="content-section">
-    <div class="container">
-      <div class="row align-items-center mb-5 fade-in" id="block1">
-        <div class="col-md-6">
-          <img src="img/collection Image.jpg" alt="Collections">
-        </div>
-        <div class="col-md-6">
-          <h2 class="section-title">Collections</h2>
-          <!-- <p>With the vision to achieve perfection in our craft and provide the best to our customers, our own Stone Throw was set up in 1991 in Behror, on the Delhi-Jaipur Highway.</p> -->
-           <p>Step into a world where nature’s artistry meets human craftsmanship. At Marble Mart, every slab tells a story of elegance and endurance. From the pristine whites of Carrara to the deep, rich hues of Emperador, our collection is curated to bring luxury and sophistication to every space.</p>
-          <a href="collection.html" class="btn btn-view">VIEW</a>
-        </div>
-      </div>
 
-      <div class="row align-items-center mb-5 fade-in" id="block2">
-        <div class="col-md-6 order-md-2">
-          <img src="img/showroom.jpg" alt="Showroom">
-        </div>
-        <div class="col-md-6 order-md-1">
-          <h2 class="section-title">The Grand Showroom</h2>
-          <p>A place where vision transforms into reality. Our flagship showroom in Mayapuri, New Delhi, is more than just a display—it’s an experience center, featuring the finest marbles sourced from across the globe. Walk through carefully curated displays, feel the textures, and find the perfect stone to elevate your interiors.</p>
-          <!-- <p>Marble City has reached an important milestone by launching its spectacular showroom with the largest warehouse and an experience center in Mayapuri (Rajouri Garden), New Delhi.</p> -->
-           
-          <a href="gallery/gallery.html" class="btn btn-view">VIEW</a>
-          
-        </div>
-      </div>
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center mb-5 fade-in" id="block1">
+                <div class="col-md-6">
+                    <img src="img/collection Image.jpg" alt="Collections">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">Collections</h2>
+                    <!-- <p>With the vision to achieve perfection in our craft and provide the best to our customers, our own Stone Throw was set up in 1991 in Behror, on the Delhi-Jaipur Highway.</p> -->
+                    <p>Step into a world where nature’s artistry meets human craftsmanship. At Marble Mart, every slab
+                        tells a story of elegance and endurance. From the pristine whites of Carrara to the deep, rich
+                        hues of Emperador, our collection is curated to bring luxury and sophistication to every space.
+                    </p>
+                    <a href="collection.html" class="btn btn-view">VIEW</a>
+                </div>
+            </div>
 
-      <div class="row align-items-center mb-5 fade-in" id="block3">
-        <div class="col-md-6">
-          <img src="img/factory (1).jpg" alt="Factory">
-        </div>
-        <div class="col-md-6">
-          <h2 class="section-title">Precision Crafting at Our Factory</h2>
-          
-      <p>Crafted to perfection, our state-of-the-art facility in Behror is where raw stone transforms into masterpieces. Using cutting-edge technology, we ensure precise cuts, flawless finishes, and unmatched durability, preserving the natural essence of every marble slab.</p> 
-          <a  href="project.html" class="btn btn-view">VIEW</a>
-        </div>
-      </div>
+            <div class="row align-items-center mb-5 fade-in" id="block2">
+                <div class="col-md-6 order-md-2">
+                    <img src="img/showroom.jpg" alt="Showroom">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="section-title">The Grand Showroom</h2>
+                    <p>A place where vision transforms into reality. Our flagship showroom in Chattarpur & Kishangarh,
+                        New Delhi, is more than just a display—it’s an experience center, featuring the finest marbles
+                        sourced from across the globe. Walk through carefully curated displays, feel the textures, and
+                        find the perfect stone to elevate your interiors.</p>
+                    <!-- <p>Marble City has reached an important milestone by launching its spectacular showroom with the largest warehouse and an experience center in Mayapuri (Rajouri Garden), New Delhi.</p> -->
 
-      <div class="row align-items-center mb-5 fade-in" id="block4">
-        <div class="col-md-6 order-md-2">
-          <img src="https://marblecity.in/images/collection.jpg" alt="Design Studio">
-        </div>
-        <div class="col-md-6 order-md-1">
-          <h2 class="section-title">The Gallery of Grandeur</h2>
-          <p>Marble isn’t just a material—it’s a statement. Our Gallery showcases how natural stone can transform homes, hotels, and commercial spaces into architectural wonders. Explore inspirations and discover how marble can redefine elegance in every setting</p>
-          <a  href="gallery/gallery2.html"  class="btn btn-view">VIEW</a>
-        </div>
-      </div>
+                    <a href="gallery/gallery.html" class="btn btn-view">VIEW</a>
 
-      <div class="row align-items-center mb-5 fade-in" id="block5">
-        <div class="col-md-6">
-          <img src="img/Manufacture.jpeg" alt="Innovation Hub">
-        </div>
-        <div class="col-md-6">
-          <h2 class="section-title">Innovation Hub</h2>
-          <p>Pushing the boundaries of tradition, our Innovation Hub explores sustainable practices, next-gen treatments, and smart stone technologies. With a focus on eco-friendly solutions and enhanced durability, we redefine the way marble is processed and preserved for generations to come.</p>
-          <a class="btn btn-view" href="blog.html">VIEW</a>
-        </div>
-      </div>
+                </div>
+            </div>
 
-      
-    </div>
-  </section>
+            <div class="row align-items-center mb-5 fade-in" id="block3">
+                <div class="col-md-6">
+                    <img src="img/factory (1).jpg" alt="Factory">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">Precision Crafting at Our Factory</h2>
+
+                    <p>Crafted to perfection, our state-of-the-art facility in Abu Road, Rajasthan is where raw stone
+                        transforms into masterpieces. Using cutting-edge technology, we ensure precise cuts, flawless
+                        finishes, and unmatched durability, preserving the natural essence of every marble slab.</p>
+                    <a href="project.html" class="btn btn-view">VIEW</a>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 fade-in" id="block4">
+                <div class="col-md-6 order-md-2">
+                    <img src="https://marblecity.in/images/collection.jpg" alt="Design Studio">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="section-title">The Gallery of Grandeur</h2>
+                    <p>Marble isn’t just a material—it’s a statement. Our Gallery showcases how natural stone can
+                        transform homes, hotels, and commercial spaces into architectural wonders. Explore inspirations
+                        and discover how marble can redefine elegance in every setting</p>
+                    <a href="gallery/gallery2.html" class="btn btn-view">VIEW</a>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 fade-in" id="block5">
+                <div class="col-md-6">
+                    <img src="img/Manufacture.jpeg" alt="Innovation Hub">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">Innovation Hub</h2>
+                    <p>Pushing the boundaries of tradition, our Innovation Hub explores sustainable practices, next-gen
+                        treatments, and smart stone technologies. With a focus on eco-friendly solutions and enhanced
+                        durability, we redefine the way marble is processed and preserved for generations to come.</p>
+                    <a class="btn btn-view" href="blog.html">VIEW</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
 
     <!-- Card End  -->
 
     <!-- scrolling gallery  -->
-    <section  style="background: url('https://wallpaperaccess.com/full/4490477.jpg') no-repeat center center/cover; padding: 50px 0; color: white;">
-        <div class="container py-5">
-            <h1 class="text-center text-primary">Marble Collections</h1>
-            <ul class="nav nav-tabs justify-content-center my-4" id="marbleTabs">
-                <li class="nav-item">
-                    <a class="nav-link active" data-section="popular">Popular Marble</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-section="colours">Marble by Colours</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-section="spaces">Marble by Spaces</a>
-                </li>
-            </ul>
-            
-            <section id="popular" class="section active-section">
-                <div class="row">
-                    <div class="col-md-4 rounded-sm">
-                        <div class="card bg-dark text-white rounded-sm">
-                            <img src="https://cdn.pixabay.com/photo/2024/06/05/09/53/ai-generated-8810201_1280.jpg" class="card-img-top" alt="Flawless White">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Dark Emperador</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/23.brescia beige.png" class="card-img-top" alt="Imported Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">brescia beige</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/9.Armani Grey.png" class="card-img-top" alt="Imported Italian Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Armani Grey</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="row pt-3">
-                    <div class="col-md-4 rounded-sm">
-                        <div class="card bg-dark text-white rounded-sm">
-                            <img src="ImportedMarbles/Imported Marbles/27.Grey william.png" class="card-img-top" alt="Flawless White">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Grey william</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/31.French Brown.png" class="card-img-top" alt="Imported Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">French Brown</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/5.Omani Grey.png" class="card-img-top" alt="Imported Italian Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Omani Grey</h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </section>
-    
-            <section id="colours" class="section">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="https://cdn.pixabay.com/photo/2018/07/13/04/51/marble-3534940_1280.jpg" class="card-img-top" alt="Black Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">White Marble</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="https://media.istockphoto.com/id/182027648/vector/black-marble-stone-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=JZO0UvRWOwYqlOe1OtKQnPFDbkTwDV9YkKXB6hz4ipE=" class="card-img-top" alt="White Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Black Marble stone</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/19.Grey 1.png" class="card-img-top" alt="White Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Grey Marble </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/28.Armani brown.png" class="card-img-top" alt="White Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Brown Marble </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="ImportedMarbles/Imported Marbles/31.French Brown.png" class="card-img-top" alt="White Marble">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Brown Marble </h5>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
-    
-            <section id="spaces" class="section">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="https://tse4.mm.bing.net/th?id=OIP.OyJDBIAgBSMlzJzjDQo6MAHaEf&pid=Api&P=0&h=180" class="card-img-top" alt="Living Room">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Living Room</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="https://www.bhandarimarblegroup.com/wp-content/uploads/2021/07/BhaNdari-Marble-Group-11-3-7.jpg" class="card-img-top" alt="Kitchen">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Stairs</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card bg-dark text-white">
-                            <img src="https://tse3.mm.bing.net/th?id=OIP.MphzVCbYhp9ydGs9tQKq9wHaFj&pid=Api&P=0&h=180" class="card-img-top" alt="Kitchen">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Kitchen</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            
-            
-        </div>
-    
+    <section
+        style="background: url('https://wallpaperaccess.com/full/4490477.jpg') no-repeat center center/cover; padding: 50px 0; color: white;">
+        
+
         <script>
-            $(document).ready(function() {
-                $(".nav-link").click(function() {
+            $(document).ready(function () {
+                $(".nav-link").click(function () {
                     $(".nav-link").removeClass("active");
                     $(this).addClass("active");
                     var section = $(this).data("section");
-                    
+
                     $(".section").removeClass("active-section");
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $(".section").hide();
                         $("#" + section).show();
                         setTimeout(() => $("#" + section).addClass("active-section"), 10);
@@ -827,53 +763,54 @@
                 });
             });
         </script>
-     
-
-      <!-- scrolling gallery  end-->
 
 
-    <!-- Export Countries Start -->
-    <div class="container-fluid ">
-        <div class="container text-center ">
-            <h2 class="text-white pb-3">Export Countries</h2>
-            <div id="map"></div>
+        <!-- scrolling gallery  end-->
+
+
+        <!-- Export Countries Start -->
+        <div class="container-fluid ">
+            <div class="container text-center ">
+                <h2 class="text-white pb-3">Export Countries</h2>
+                <div id="map"></div>
+            </div>
+
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+                var map = L.map('map').setView([20, 10], 2); // Centering the map
+
+                // Using OpenStreetMap tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+
+                // Locations
+                var locations = [
+                    { name: "United Arab Emirates (UAE)", coords: [25.276987, 55.296249] },
+                    { name: "South Africa", coords: [-30.5595, 22.9375] },
+                    { name: "Iraq", coords: [33.3152, 44.3661] },
+                    { name: "Slovakia", coords: [48.6690, 19.6990] },
+                    { name: "Ecuador", coords: [-1.8312, -78.1834] },
+                    { name: "Russia", coords: [61.5240, 105.3188] } // Added Russia
+                ];
+
+                // Adding markers
+                locations.forEach(loc => {
+                    L.marker(loc.coords).addTo(map)
+                        .bindPopup(`<b>${loc.name}</b>`).openPopup();
+                });
+            </script>
+            <div class="container text-center ">
+                <h2 class="text-white px-2 pt-4">UAE | South Africa | Iraq | Slovakia | Ecuador | Russia</h2>
+
+            </div>
+
+
         </div>
-    
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            var map = L.map('map').setView([20, 10], 2); // Centering the map
-    
-            // Using OpenStreetMap tiles
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap contributors'
-            }).addTo(map);
-    
-            // Locations
-            var locations = [
-                { name: "United Arab Emirates (UAE)", coords: [25.276987, 55.296249] },
-                { name: "South Africa", coords: [-30.5595, 22.9375] },
-                { name: "Iraq", coords: [33.3152, 44.3661] },
-                { name: "Slovakia", coords: [48.6690, 19.6990] },
-                { name: "Ecuador", coords: [-1.8312, -78.1834] }
-            ];
-    
-            // Adding markers
-            locations.forEach(loc => {
-                L.marker(loc.coords).addTo(map)
-                    .bindPopup(`<b>${loc.name}</b>`).openPopup();
-            });
-        </script>
-         <div class="container text-center ">
-            <h2 class="text-white px-2 pt-4">UAE | South Africa | Iraq | Slovakia | Ecuador</h2>
-           
-        </div>
-
-
-    </div>
-</section>
+    </section>
     <!-- Projects End -->
 
-    
+
 
     <!-- Blog Start -->
     <div class="container-fluid bg-light pt-5" s
@@ -885,11 +822,20 @@
                     <h1 class="mb-4  ">Some Of Our Finest Work</h1>
                 </div>
                 <div class="material-section d-none d-sm-flex">
-                    <div class="material" style="background-image: url('IndianMarbles/IndianMarbles/1\ Ambaji\ White\ 1.jpg');" data-name="Marble"></div>
-                    <div class="material" style="background-image: url('Nano/Nano/\(1\)\ NANO\ COLOURED.jpg');" data-name="Nano"></div>
-                    <div class="material" style="background-image: url('IndianMarbles/IndianMarbles/4\ UDAIPUR_GREEN.jpg');" data-name="IndianMarbles"></div>
-                    <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/3\ Ambaji\ White\ 3.jpg');" data-name="IndianMarbles"></div>
-                    <div class="material" style="background-image: url('./IndianMarbles/IndianMarbles/5\ JAISALMER\ \ YELLOW.jpg');" data-name="Jaisalmer yellow"></div>
+                    <div class="material"
+                        style="background-image: url('IndianMarbles/IndianMarbles/1\ Ambaji\ White\ 1.jpg');"
+                        data-name="Marble"></div>
+                    <div class="material" style="background-image: url('Nano/Nano/\(1\)\ NANO\ COLOURED.jpg');"
+                        data-name="Nano"></div>
+                    <div class="material"
+                        style="background-image: url('IndianMarbles/IndianMarbles/4\ UDAIPUR_GREEN.jpg');"
+                        data-name="IndianMarbles"></div>
+                    <div class="material"
+                        style="background-image: url('./IndianMarbles/IndianMarbles/3\ Ambaji\ White\ 3.jpg');"
+                        data-name="IndianMarbles"></div>
+                    <div class="material"
+                        style="background-image: url('./IndianMarbles/IndianMarbles/5\ JAISALMER\ \ YELLOW.jpg');"
+                        data-name="Jaisalmer yellow"></div>
                 </div>
             </div>
 
@@ -911,7 +857,7 @@
 
 
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="https://images.pexels.com/photos/3704994/pexels-photo-3704994.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    <img src="https://images.pexels.com/photos/866351/pexels-photo-866351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                         class="w-100 shadow-1-strong rounded mb-4 black-shadow" alt="Waves at Sea" />
                     <img src="https://images.pexels.com/photos/4709028/pexels-photo-4709028.jpeg?auto=compress&cs=tinysrgb&w=600"
                         class="w-100 shadow-1-strong rounded mb-4 black-shadow" alt="Yosemite National Park" />
@@ -926,7 +872,7 @@
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img src="https://images.pexels.com/photos/2102546/pexels-photo-2102546.jpeg?auto=compress&cs=tinysrgb&w=600"
                         class="w-100 shadow-1-strong rounded mb-4 black-shadow" alt="Mountains in the Clouds" />
-                    <img src="https://images.pexels.com/photos/12430982/pexels-photo-12430982.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    <img src="https://images.unsplash.com/photo-1558346648-9757f2fa4474?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="w-100 shadow-1-strong rounded mb-4 black-shadow" alt="Boat on Calm Water" />
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -949,12 +895,12 @@
                         <img src="logo/trehan.png" alt="Client 4">
                         <img src="logo/Tata.png" alt="Client 5">
                         <img src="logo/Hdfc.png" alt="Client 6">
-                        <img src="logo/Omax.png" alt="Client 7" >
+                        <img src="logo/Omax.png" alt="Client 7">
                         <img src="logo/ansal.png" alt="Client 8">
                         <img src="logo/godrej.png" alt="Client 9">
                         <img src="logo/Forties.png" alt="Client 10">
                         <img src="logo/aaof.png" alt="Client 13">
-                        <img src="logo/sarovar.png" alt="Client 14" >
+                        <img src="logo/sarovar.png" alt="Client 14">
                         <img src="logo/lalit.png" alt="Client 15">
                         <img src="logo/Dhanuka.png" alt="Client 16">
                         <img src="logo/Bharti.png" alt="Client 17">
@@ -962,11 +908,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery -->
-             
+
         </div>
-        
+
     </div>
 
 
@@ -980,22 +926,28 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-primary mb-4">Get In Touch</h4>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>Khasra No. 383,
-                      Near Shanidham Mandir,
-                      Shani Mandir Road,<br>Main Chattarpur Road,
-                      <br>New Delhi - 110074</p>
+                    Near Shanidham Mandir,
+                    Shani Mandir Road,<br>Main Chattarpur Road,
+                    <br>New Delhi - 110074
+                </p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+91 99100 59659, 95601 58551</p>
-                
+
                 <p><i class="fa fa-envelope mr-2"></i>sanjeev9000@gmail.com</p>
                 <p><i class="fa fa-envelope mr-2"></i>bgaurav1@rediffmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
                         style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 38px; height: 38px;" href="https://www.facebook.com/share/18szo4WKhJ/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                        style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/share/18szo4WKhJ/?mibextid=wwXIfr"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 38px; height: 38px;" href="mailto:sanjeev9000@gmail.com"><i class="flaticon-email"></i></a>
+                        style="width: 38px; height: 38px;" href="mailto:sanjeev9000@gmail.com"><i
+                            class="flaticon-email"></i></a>
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 38px; height: 38px;" href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                        style="width: 38px; height: 38px;"
+                        href="https://www.instagram.com/marblemart2025?igsh=MWR0bmo5eDB0dG90Nw%3D%3D&utm_source=qr"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -1003,16 +955,20 @@
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="Indian Granite/Indian Granite.html"><i class="fa fa-angle-right mr-2"></i>Indian Granite</a>
-                    <a class="text-white mb-2" href="ImportedMarbles/Imported Marbles.html"><i class="fa fa-angle-right mr-2"></i>Imported Marbles</a>
+                    <a class="text-white mb-2" href="Indian Granite/Indian Granite.html"><i
+                            class="fa fa-angle-right mr-2"></i>Indian Granite</a>
+                    <a class="text-white mb-2" href="ImportedMarbles/Imported Marbles.html"><i
+                            class="fa fa-angle-right mr-2"></i>Imported Marbles</a>
                     <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-primary mb-4">Popular Marbles</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="gallery/gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery 1</a>
-                    <a class="text-white mb-2" href="gallery/gallery2.html"><i class="fa fa-angle-right mr-2"></i>Gallery 2</a>
+                    <a class="text-white mb-2" href="gallery/gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery
+                        1</a>
+                    <a class="text-white mb-2" href="gallery/gallery2.html"><i
+                            class="fa fa-angle-right mr-2"></i>Gallery 2</a>
                     <a class="text-white mb-2" href="Onxy/Onxy.html"><i class="fa fa-angle-right mr-2"></i>Onxy</a>
                 </div>
             </div>
@@ -1054,45 +1010,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-      document.addEventListener("scroll", () => {
-        const blocks = document.querySelectorAll(".fade-in");
-        blocks.forEach(block => {
-          const rect = block.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            block.classList.add("show");
-          }
+        document.addEventListener("scroll", () => {
+            const blocks = document.querySelectorAll(".fade-in");
+            blocks.forEach(block => {
+                const rect = block.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    block.classList.add("show");
+                }
+            });
         });
-      });
-  
-      // Counter Animation
-      document.addEventListener("scroll", () => {
-        const counters = document.querySelectorAll(".stats-number");
-        counters.forEach(counter => {
-          if (!counter.classList.contains("counted")) {
-            const rect = counter.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-              counter.classList.add("counted");
-              animateCounter(counter);
-            }
-          }
+
+        // Counter Animation
+        document.addEventListener("scroll", () => {
+            const counters = document.querySelectorAll(".stats-number");
+            counters.forEach(counter => {
+                if (!counter.classList.contains("counted")) {
+                    const rect = counter.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        counter.classList.add("counted");
+                        animateCounter(counter);
+                    }
+                }
+            });
         });
-      });
-  
-      function animateCounter(element) {
-        const target = parseInt(element.getAttribute("data-target"));
-        const step = target / 100;
-        let count = 0;
-        const updateCounter = () => {
-          count += step;
-          if (count < target) {
-            element.textContent = Math.floor(count);
+
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute("data-target"));
+            const step = target / 100;
+            let count = 0;
+            const updateCounter = () => {
+                count += step;
+                if (count < target) {
+                    element.textContent = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
             requestAnimationFrame(updateCounter);
-          } else {
-            element.textContent = target;
-          }
-        };
-        requestAnimationFrame(updateCounter);
-      }
+        }
     </script>
 
     <!-- Template Javascript -->
