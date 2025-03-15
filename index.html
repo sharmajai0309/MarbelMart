@@ -21,7 +21,7 @@
     <!-- Flaticon Font -->
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
@@ -30,6 +30,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -117,6 +118,17 @@
             border-radius: 40px;
 
 
+        }
+        .export-section {
+            background: url('https://wallpaperaccess.com/full/4490477.jpg') no-repeat center center/cover;
+            padding: 50px 0;
+            color: white;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
         }
 
         .material:hover::after {
@@ -743,70 +755,55 @@
     <!-- Card End  -->
 
     <!-- scrolling gallery  -->
-    <section
-        style="background: url('https://wallpaperaccess.com/full/4490477.jpg') no-repeat center center/cover; padding: 50px 0; color: white;">
-        
+    <section class="export-section text-center py-5">
+        <div class="container">
+            <h2 class="text-white pb-3">Export Countries</h2>
 
-        <script>
-            $(document).ready(function () {
-                $(".nav-link").click(function () {
-                    $(".nav-link").removeClass("active");
-                    $(this).addClass("active");
-                    var section = $(this).data("section");
-
-                    $(".section").removeClass("active-section");
-                    setTimeout(function () {
-                        $(".section").hide();
-                        $("#" + section).show();
-                        setTimeout(() => $("#" + section).addClass("active-section"), 10);
-                    }, 300);
-                });
-            });
-        </script>
-
-
-        <!-- scrolling gallery  end-->
-
-
-        <!-- Export Countries Start -->
-        <div class="container-fluid ">
-            <div class="container text-center ">
-                <h2 class="text-white pb-3">Export Countries</h2>
-                <div id="map"></div>
+            <!-- Map -->
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div id="map"></div>
+                </div>
             </div>
 
-            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-            <script>
-                var map = L.map('map').setView([20, 10], 2); // Centering the map
+            <!-- Country List -->
+            <h2 class="text-white pt-4">
+                UAE | South Africa | Iraq | Slovakia | Ecuador | Russia
+            </h2>
+        </div>
 
-                // Using OpenStreetMap tiles
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Leaflet.js (No API Required) -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var map = L.map('map').setView([20, 10], 2); // Center map
+
+                // Add OpenStreetMap Tiles
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '&copy; OpenStreetMap contributors'
                 }).addTo(map);
 
-                // Locations
+                // Country Markers
                 var locations = [
                     { name: "United Arab Emirates (UAE)", coords: [25.276987, 55.296249] },
                     { name: "South Africa", coords: [-30.5595, 22.9375] },
                     { name: "Iraq", coords: [33.3152, 44.3661] },
                     { name: "Slovakia", coords: [48.6690, 19.6990] },
                     { name: "Ecuador", coords: [-1.8312, -78.1834] },
-                    { name: "Russia", coords: [61.5240, 105.3188] } // Added Russia
+                    { name: "Russia", coords: [61.5240, 105.3188] }
                 ];
 
-                // Adding markers
                 locations.forEach(loc => {
                     L.marker(loc.coords).addTo(map)
-                        .bindPopup(`<b>${loc.name}</b>`).openPopup();
+                        .bindPopup(`<b>${loc.name}</b>`)
+                        .openPopup();
                 });
-            </script>
-            <div class="container text-center ">
-                <h2 class="text-white px-2 pt-4">UAE | South Africa | Iraq | Slovakia | Ecuador | Russia</h2>
-
-            </div>
-
-
-        </div>
+            });
+        </script>
     </section>
     <!-- Projects End -->
 
@@ -816,7 +813,7 @@
     <div class="container-fluid bg-light pt-5" s
         style="background-image: url('https://images.pexels.com/photos/4705933/pexels-photo-4705933.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container py-5">
-            <!-- Title Section -->
+            <!-- Title Section --> 
             <div class="d-flex justify-content-center align-items-center text-center mb-4">
                 <div class="col-lg-6 col-md-8 col">
                     <h1 class="mb-4  ">Some Of Our Finest Work</h1>
